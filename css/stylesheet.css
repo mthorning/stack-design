@@ -1,0 +1,57 @@
+body {
+    background: url(../img/bgphoto.jpg) no-repeat center center;
+    background-size: cover;
+    font-family: 'Space Mono', monospace;
+}
+
+h1 {
+    text-align: center;
+    font-size: 7em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 5px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 4em;
+    margin-top: 10px;
+}
+
+h3:last-child {
+    text-align: center;
+    font-size: 4em;
+    margin-top: 10px;
+    color: #1c1c1c
+}
+
+#page {
+    height: 80vh;
+}
+
+#constructionDiv {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#constructionDiv > h2 {
+    font-size: 3em;
+}
+
+#construction {
+    opacity: 0.7;
+}
+
+#footer {
+    height: 20vh;
+}
+
+#footer p,
+#footer a {
+    text-align: right;
+    color: #757575;
+    padding-top: 15vh;
+}
