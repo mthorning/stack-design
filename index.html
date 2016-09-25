@@ -10,7 +10,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,12 +22,12 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div id="mainContainer" class="container-fluid">
        <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
         <!--default for white or inverse for black-->
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="index.html"><img src="img/Stack-Design%20logo.jpg"></a>
                 <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
                     <!--bootstrap has some built-in functionality with data-target referring to the id of the containing div and data-toggle defining the function of the button as in JQuery-->
                     <span class="sr-only">Toggle navigation</span>
@@ -42,30 +42,38 @@
                     <li><a href="#">Blog<span class="caret"></span></a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="input-group">
-                        <span class="input-group-btn"><button type="submit" class="btn btn-info">Go</button></span>
-                        <label for="search" class="sr-only">Search Box</label>
-                        <input type="text" id="search" class="form-control" placeholder="search">
-                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
-                    </div>
-                </form>
-                <form class="navbar-form navbar-right">
-                    <input type="submit" class="btn btn-success" value="Login">
+                <form class="navbar-form navbar-left">
+                    <input id="navbarContactBtn" type="submit" class="btn btn-success" value="Contact">
                 </form>
             </div>
         </div>
     </nav>
-
-
-        <div id="footer">
-            <div class="container-fluid">
-                <p>
-                    <a href="mailto:matthewthorning@gmail.com">&copy; 2016 stack-design</a>
-                </p>
-            </div>
+    
+    <div id="contactPopUpContainer" class="container-fluid">
+        <div id="contactPopUpFormContainer">
+            <h3>Please Enter Your Details</h3>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name.">
+                    <label for="email">Email:</label>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter your email address">
+                    <label for="comment">Enquiry:</label>
+                    <textarea class="form-control" name="comment" id="comment" rows="5"></textarea> 
+                    <input type="submit" class="btn btn-success">
+                </div>
+            </form>
         </div>
     </div>
+
+    <div id="footer">
+        <div class="container-fluid">
+            <p>
+                <a href="mailto:matthewthorning@gmail.com">&copy; 2016 stack-design</a>
+            </p>
+        </div>
+    </div>
+</div>
       
 
     
