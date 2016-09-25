@@ -1,0 +1,42 @@
+/* line 4, C:/xampp/htdocs/stack-design/css/style.scss */
+body {
+  background: url(../img/bgphoto.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh; }
+  /* line 8, C:/xampp/htdocs/stack-design/css/style.scss */
+  body #mainContainer {
+    height: 100%;
+    width: 100%;
+    padding: 0; }
+  /* line 15, C:/xampp/htdocs/stack-design/css/style.scss */
+  body nav .navbar-header .navbar-brand {
+    padding: 2px 0 1px 3px; }
+  /* line 18, C:/xampp/htdocs/stack-design/css/style.scss */
+  body nav .navbar-header img {
+    height: 100%; }
+  /* line 23, C:/xampp/htdocs/stack-design/css/style.scss */
+  body #contactPopUpContainer {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    /* line 30, C:/xampp/htdocs/stack-design/css/style.scss */
+    body #contactPopUpContainer #contactPopUpFormContainer {
+      width: 50%;
+      height: popUpWidth;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 30px;
+      margin: auto;
+      padding: 15px; }
+      /* line 38, C:/xampp/htdocs/stack-design/css/style.scss */
+      body #contactPopUpContainer #contactPopUpFormContainer .btn {
+        float: right;
+        margin: 20px; }
+      /* line 42, C:/xampp/htdocs/stack-design/css/style.scss */
+      body #contactPopUpContainer #contactPopUpFormContainer .form-control {
+        margin-bottom: 5px; }
+
+/*# sourceMappingURL=style.css.map */

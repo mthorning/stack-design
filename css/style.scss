@@ -1,0 +1,48 @@
+$border-radius: 30px;
+$popUpWidth: 50%;
+
+body {
+    background: url(../img/bgphoto.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    #mainContainer {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+    nav {
+        .navbar-header {
+            .navbar-brand {
+                padding: 2px 0 1px 3px;
+            }
+            img {
+                height: 100%;
+            }
+        }
+    }
+    #contactPopUpContainer {
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        #contactPopUpFormContainer{
+            width: $popUpWidth;
+            height: popUpWidth;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: $border-radius;
+            margin: auto;
+            padding: 15px;
+            .btn {
+                float: right;
+                margin: 20px;
+            }
+            .form-control {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
