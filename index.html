@@ -22,7 +22,6 @@
 </head>
 
 <body>
-    <div id="mainContainer" class="container-fluid">
        <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
         <!--default for white or inverse for black-->
         <div class="container-fluid">
@@ -45,12 +44,13 @@
             </div>
         </div>
     </nav>
-    </div>
     
-    <div id="containerForHiding">
+    <section id="containerForHiding">
         <div id="contactPopUpContainer" class="container-fluid">
             <div id="contactPopUpFormContainer">
-                <span id="formClose" class="glyphicon glyphicon-remove"></span>
+                <div id="closeContainer">
+                    <span id="formClose" class="glyphicon glyphicon-remove"></span>
+                </div>
                 <h3>How can I help?</h3>
                 <form action="" method="post">
                     <div class="form-group">
@@ -65,15 +65,15 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
-<div id="footer">
+<section id="footer">
     <div class="container-fluid">
         <p>
             <a href="mailto:matthewthorning@gmail.com">&copy; 2016 stack-design</a>
         </p>
     </div>
-</div>
+</section>
 
       
 
@@ -90,6 +90,12 @@
             });  
             $('#formClose').click(function () {
                 $('#containerForHiding').css('display' , 'none');
+            });
+            
+            $('#closeContainer').hover(function () {
+                $('#formClose').css('opacity', 0.8);
+            }, function () {
+                $('#formClose').css('opacity', 0);
             });
         });      
     </script>

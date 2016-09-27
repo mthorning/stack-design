@@ -56,12 +56,17 @@ body {
                 border: 1px solid black;
                 border-radius: $border-radius;
                 margin: auto;
-                padding: 15px;
-                #formClose {
+                padding: 20px;
+                #closeContainer {
                     float: right;
-                    &:hover {
-                        cursor: pointer;
-                    }
+                    padding: 15px;
+                    #formClose {
+                        opacity: 0;
+                        color: $primaryTextColor;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }   
                 }
                 textarea {
                     width: 100%;
