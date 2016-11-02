@@ -1,0 +1,14 @@
+nav {
+    .navbar-header {
+        .navbar-brand {
+            padding: 2px 0 1px 3px;
+            > h4 {
+                margin-top: 2px;
+                padding-right: 20px;
+            }
+        }
+    }
+    #navbarContactBtn {
+        cursor: pointer;
+    }
+}

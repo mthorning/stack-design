@@ -1,4 +1,12 @@
 //modules
+@import 'modules/_variables';
+@import 'modules/_breakpoints';
+@import 'modules/_mixins';
 
 //pages
-@import 'pages/landingPage'
+@import 'pages/_base';
+@import 'pages/_landingPage';
+@import 'pages/_header';
+@import 'pages/_contact';
+@import 'pages/_homePage';
+@import 'pages/_clientLogin';

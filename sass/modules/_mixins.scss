@@ -1,0 +1,48 @@
+@import '   breakpoints';
+
+@mixin button ($border, $bg, $color,$hBorder: null, $hBg: null, $hColor: null) {
+    border: 1px solid $border;
+    background-color: $bg;
+    color: $color;
+    &:hover {
+        background-color: $hBg;
+        color: $hColor;
+        box-shadow: 2px 2px 8px #1c1c1c;
+    }
+}
+
+@mixin standardContainer {
+    float: none;
+    border-radius: 25px;
+    padding: 50px;
+    margin: 90px auto;
+    @include xs {
+        border-radius: 0;
+        padding: 10px;
+        margin: 50px auto 0 auto;
+    }
+    width: 75%;
+    @include sm {
+        width: 90vw;
+    }
+    @include xs {
+        width: 100%;
+    }
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 5px 5px 8px $darkGrey;
+}
+
+@mixin borderedPic {
+    background-color: white;
+    border: 1px solid $bgHighlight;
+    padding: 5px;
+    border-radius: 8px;
+    @include xs {
+        padding: 0;
+    }
+}
+
+@mixin verticalAlign {
+    display: flex;
+    align-items: center;
+}

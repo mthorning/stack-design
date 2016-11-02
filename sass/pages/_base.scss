@@ -1,0 +1,45 @@
+body {
+    font-family: 'Space Mono', monospace;
+    color: $darkTextColor;
+    cursor: default;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    p {
+        text-indent: 30px;
+    }
+    p,
+    li {
+        font-size: 1.1em;
+        text-align: justify;
+    }
+}
+
+.btn-custom {
+    margin: auto;
+    @include button($lightTextColor, rgba( 34, 52, 169, 1), $lightTextColor, $hBorder: $darkTextColor, $hColor: $lightTextColor);
+}
+
+.basicPageTemplate {
+    background: url(../img/carbonPattern.jpg);
+    #rightColumn {
+        height: 100%;
+        border-left: 3px double $darkTextColor;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fb8c1c;
+    }
+    ul {
+        text-align: left;
+    }
+    
+}
+
+.standardContainer {
+    @include standardContainer;
+}

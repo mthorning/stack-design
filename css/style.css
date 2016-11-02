@@ -1,3 +1,170 @@
+body {
+  font-family: 'Space Mono', monospace;
+  color: #1e1e1e;
+  cursor: default;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden; }
+  body p {
+    text-indent: 30px; }
+  body p,
+  body li {
+    font-size: 1.1em;
+    text-align: justify; }
 
+.btn-custom {
+  margin: auto;
+  border: 1px solid #d1d1d1;
+  background-color: #2234a9;
+  color: #d1d1d1; }
+  .btn-custom:hover {
+    color: #d1d1d1;
+    box-shadow: 2px 2px 8px #1c1c1c; }
+
+.basicPageTemplate {
+  background: url(../img/carbonPattern.jpg); }
+  .basicPageTemplate #rightColumn {
+    height: 100%;
+    border-left: 3px double #1e1e1e; }
+  .basicPageTemplate h1,
+  .basicPageTemplate h2,
+  .basicPageTemplate h3,
+  .basicPageTemplate h4,
+  .basicPageTemplate h5,
+  .basicPageTemplate h6 {
+    color: #fb8c1c; }
+  .basicPageTemplate ul {
+    text-align: left; }
+
+.standardContainer {
+  float: none;
+  border-radius: 25px;
+  padding: 50px;
+  margin: 90px auto;
+  width: 75%;
+  background-color: white;
+  box-shadow: 5px 5px 8px #1a1818; }
+  @media screen and (max-width: 480px) {
+    .standardContainer {
+      border-radius: 0;
+      padding: 10px;
+      margin: 50px auto 0 auto; } }
+  @media screen and (max-width: 768px) {
+    .standardContainer {
+      width: 90vw; } }
+  @media screen and (max-width: 480px) {
+    .standardContainer {
+      width: 100%; } }
+
+#landingPage {
+  background: url(../img/mountains.jpg) no-repeat;
+  background-size: cover;
+  display: flex; }
+  #landingPage a {
+    width: 100%;
+    height: 40%;
+    margin: auto;
+    text-align: center;
+    text-decoration: none; }
+    #landingPage a h1 {
+      width: 100%;
+      color: white;
+      font-size: 120px;
+      display: inline-block; }
+
+nav .navbar-header .navbar-brand {
+  padding: 2px 0 1px 3px; }
+  nav .navbar-header .navbar-brand > h4 {
+    margin-top: 2px;
+    padding-right: 20px; }
+nav #navbarContactBtn {
+  cursor: pointer; }
+
+#containerForHiding {
+  display: none; }
+  #containerForHiding #contactPopUpContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #containerForHiding #contactPopUpContainer #contactPopUpFormContainer {
+      width: 600px;
+      height: popUpWidth;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 30px;
+      margin: auto;
+      padding: 15px; }
+      @media (max-width: 700px) {
+        #containerForHiding #contactPopUpContainer #contactPopUpFormContainer {
+          width: 400px;
+          height: 428.57143px; } }
+      @media (max-width: 450px) {
+        #containerForHiding #contactPopUpContainer #contactPopUpFormContainer {
+          width: 300px;
+          height: 480px; } }
+      #containerForHiding #contactPopUpContainer #contactPopUpFormContainer #formClose {
+        float: right; }
+        #containerForHiding #contactPopUpContainer #contactPopUpFormContainer #formClose:hover {
+          cursor: pointer; }
+      #containerForHiding #contactPopUpContainer #contactPopUpFormContainer textarea {
+        width: 100%; }
+      #containerForHiding #contactPopUpContainer #contactPopUpFormContainer .btn {
+        float: right;
+        margin: 20px; }
+      #containerForHiding #contactPopUpContainer #contactPopUpFormContainer .form-control {
+        margin-bottom: 5px; }
+
+#homePage {
+  background: url(../img/aurora.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end; }
+  #homePage .slideBox {
+    display: none;
+    margin: auto 30px auto 0;
+    color: #d1d1d1;
+    text-align: right;
+    width: 40%; }
+    #homePage .slideBox h1 {
+      text-align: justify; }
+    #homePage .slideBox .btn-custom {
+      margin: auto;
+      border: 1px solid #d1d1d1;
+      background-color: rgba(34, 52, 169, 0.5);
+      color: #d1d1d1; }
+      #homePage .slideBox .btn-custom:hover {
+        background-color: #2234a9;
+        color: #d1d1d1;
+        box-shadow: 2px 2px 8px #1c1c1c; }
+
+#clientLoginPage .container {
+  min-height: 400px; }
+  #clientLoginPage .container .alert {
+    width: 75%;
+    margin: 20px auto; }
+    @media screen and (max-width: 480px) {
+      #clientLoginPage .container .alert {
+        width: 100%; } }
+  #clientLoginPage .container form {
+    width: 75%;
+    margin: auto; }
+    @media screen and (max-width: 480px) {
+      #clientLoginPage .container form {
+        width: 100%; } }
+    #clientLoginPage .container form .btn {
+      margin-top: 30px; }
+    #clientLoginPage .container form label,
+    #clientLoginPage .container form input {
+      padding: 10px;
+      margin: auto; }
 
 /*# sourceMappingURL=style.css.map */

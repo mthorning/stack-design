@@ -1,0 +1,22 @@
+#homePage {
+    background: url(../img/aurora.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    .slideBox {
+        display: none;
+        margin: auto 30px auto 0;
+        color: $lightTextColor;
+        text-align: right;
+        width: 40%;
+        h1 {
+            text-align: justify;
+        }
+        .btn-custom {
+        margin: auto;
+        @include button($lightTextColor, rgba( 34, 52, 169, 0.5), $lightTextColor, $hBg: rgba( 34, 52, 169, 1), $hColor: $lightTextColor );
+    }
+    }
+}

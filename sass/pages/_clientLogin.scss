@@ -1,0 +1,27 @@
+#clientLoginPage {
+    .container {
+        min-height: 400px;
+        .alert {
+            width: 75%;
+            margin: 20px auto;
+            @include xs {
+                width: 100%;
+            }
+        }
+        form {
+            width: 75%;
+            @include xs {
+                width: 100%;
+            }
+            margin: auto;
+            .btn {
+                margin-top: 30px;
+            }
+            label,
+            input {
+                padding: 10px;
+                margin: auto;
+            }
+        }
+    }
+}
