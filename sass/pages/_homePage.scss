@@ -1,4 +1,7 @@
 #homePage {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
     background: url(../img/aurora.jpg) no-repeat center center;
     background-size: cover;
     position: relative;

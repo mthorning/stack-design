@@ -1,10 +1,7 @@
 body {
   font-family: 'Space Mono', monospace;
   color: #1e1e1e;
-  cursor: default;
-  height: 100vh;
-  max-height: 100vh;
-  overflow: hidden; }
+  cursor: default; }
   body p {
     text-indent: 30px; }
   body p,
@@ -57,9 +54,13 @@ body {
       width: 100%; } }
 
 #landingPage {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background: url(../img/mountains.jpg) no-repeat;
   background-size: cover;
-  display: flex; }
+  display: flex;
+  align-items: center; }
   #landingPage a {
     width: 100%;
     height: 40%;
@@ -122,6 +123,9 @@ nav #navbarContactBtn {
         margin-bottom: 5px; }
 
 #homePage {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background: url(../img/aurora.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
