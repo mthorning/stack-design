@@ -6,7 +6,7 @@
             </div>
             <h3>Upload Files</h3>
             <br />
-            <form action="modules/fileUpload.php" method="post" enctype="multipart/form-data">
+            <form action="fileUpload.php" method="post" enctype="multipart/form-data">
                 <input type="file" name="uploaded"  class="btn-file">
                 <input type="submit" value="Upload File" class="btn btn-primary">
             </form>            

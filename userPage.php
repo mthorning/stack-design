@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stack-Design</title>
+    <title>Client's Area</title>
 
     <?php include 'components/headLinks.php'; ?>
 
@@ -20,6 +20,7 @@
             $firstname = $_SESSION['firstname'];
             $sites = $_SESSION['sites'];
             $siteFolders = $_SESSION['siteFolders'];
+            $email = $_SESSION['email'];
             
             if(count($sites) > 1) {
                 $multiAccess = true;
@@ -35,25 +36,13 @@
 
                 <div class="container standardContainer">
 
-                    <h1>Welcome <?php echo $firstname; ?></h1>
+                    <h1>Hello <?php echo $firstname; ?>.</h1>
                     <br />
 
-                    <h3>You have access to the following:</h3>
                     <br />
-
-                    <?php
-            
-            foreach($sites As $site) {
-                echo '<p>'.$site.'</p>';
-            }
-            
-            ?>
-
-                        <br />
-                        <hr />
-
-                        <h3>What would you like to do?</h3>
-                        <?php 
+                    <p>Click below to upload files, send a message or view the most recent developments to your website.</p>
+                    
+                    <?php 
                     if($multiAccess) {
                         echo '<select id="selectSite">';
                         for($i = 0; $i < count($sites); $i++) {
@@ -62,14 +51,16 @@
                     echo '</select>'; 
                     }
             ?>
-                    
+
             <?php 
               if (!$multiAccess) {
                   echo '<button id="upload" type="button" class="btn btn-lg btn-custom uploadBtn">Upload Files</button>';  
+                  
+                  echo '<button id="sendMessage" type="button" class="btn btn-lg btn-custom">Send a Message</button>';
               }    
             ?>
 
-                            <button id="view" type="button" class="btn btn-lg btn-custom">View Site</button>
+                    <button id="view" type="button" class="btn btn-lg btn-custom">View Site</button>
 
                 </div>
 
@@ -89,7 +80,16 @@
                         });
 
                         //upload files button
-                        $('.uploadBtn').click(function () { openClosePopup('#uploadContainer');
+                        $('.uploadBtn').click(function () {
+                            openClosePopup('#uploadContainer');
+                        });
+                        
+                        //Send Message
+                        $('#sendMessage').click(function() {
+                            openClosePopup('#contactContainer');
+                            $('#email').val('<?php echo $email; ?>');
+                            $('#name').val('<?php echo $firstname; ?>');
+                            $('#subject').val('contact from <?php echo $firstname; ?>');
                         });
                     });
                 </script>

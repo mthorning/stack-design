@@ -13,8 +13,7 @@
 </head>
 
 <body class="basicPageTemplate" id="clientLoginPage">
- 
-    <?php include 'components/header.php'; ?>
+    
     <?php   
         $class = $errors = null;
     
@@ -54,6 +53,7 @@
                 //get row id from array
                 $id = $row['id'];
                 $_SESSION['firstname'] = $row['firstname'];
+                $_SESSION['email'] = $row['email'];
                 
                 if (!$id) {
                     $errors .= '<p>Incorrect Username or Password combination</p>';
@@ -110,6 +110,7 @@
     ?>
 
     <div class="container standardContainer">
+        <a href="home.php"><span class="glyphicon glyphicon-home"></span></a>
         <h1>Please enter your login details:</h1>
         <div <?php echo $class; ?> >
             <?php echo $errors; ?>

@@ -29,7 +29,7 @@ body {
   .basicPageTemplate h4,
   .basicPageTemplate h5,
   .basicPageTemplate h6 {
-    color: #fb8c1c; }
+    color: #ff6619; }
   .basicPageTemplate ul {
     text-align: left; }
 
@@ -153,6 +153,8 @@ nav #navbarContactBtn {
 
 #clientLoginPage .container {
   min-height: 400px; }
+  #clientLoginPage .container a {
+    color: #1e1e1e; }
   #clientLoginPage .container .alert {
     width: 75%;
     margin: 20px auto; }

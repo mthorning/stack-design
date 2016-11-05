@@ -1,5 +1,8 @@
 #clientLoginPage {
     .container {
+        a {
+            color: $darkTextColor;
+        }
         min-height: 400px;
         .alert {
             width: 75%;
