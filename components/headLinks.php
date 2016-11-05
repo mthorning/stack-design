@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php session_start();
+
+if (isset($_SESSION['previous'])) {
+   if (basename($_SERVER['PHP_SELF']) != $_SESSION['previous']) {
+        session_destroy();
+        ### or alternatively, you can use this for specific variables:
+        ### unset($_SESSION['varname']);
+   }
+}
+
+ ?>
+
 <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 

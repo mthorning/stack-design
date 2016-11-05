@@ -22,24 +22,4 @@
     </div>
 </nav>
 
-<section id="containerForHiding">
-    <div id="contactPopUpContainer" class="container-fluid">
-        <div id="contactPopUpFormContainer">
-            <div id="closeContainer">
-                <span id="formClose" class="enquireBtn glyphicon glyphicon-remove"></span>
-            </div>
-            <h3>How can I help?</h3>
-            <form action="" method="post">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name.">
-                    <label for="email">Email:</label>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter your email address">
-                    <label for="comment">Enquiry:</label>
-                    <textarea class="form-control" name="comment" id="comment" rows="5" placeholder="Enter your enquiry."></textarea>
-                    <input type="submit" class="btn btn-custom">
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
+<?php include 'contactPopup.php'; ?>

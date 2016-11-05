@@ -14,7 +14,7 @@
 @mixin standardContainer {
     float: none;
     border-radius: 25px;
-    padding: 50px;
+    padding: 30px;
     margin: 90px auto;
     @include xs {
         border-radius: 0;

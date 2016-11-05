@@ -13,10 +13,9 @@
 </head>
 
 <body class="basicPageTemplate" id="clientLoginPage">
-   <?php include 'components/header.php'; ?>
-    
-    <?php
-        print session_id();
+ 
+    <?php include 'components/header.php'; ?>
+    <?php   
         $class = $errors = null;
     
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -47,16 +46,17 @@
                 include 'modules/config.php';
                 
                 //get data
-                $retVal = mysql_query('SELECT id FROM users WHERE username = "'.$username.'"');
+                $retVal = mysql_query('SELECT * FROM users WHERE username = "'.$username.'"');
                 
                 //get associative array from data
                 $row = mysql_fetch_array($retVal, MYSQL_ASSOC);
                 
                 //get row id from array
                 $id = $row['id'];
+                $_SESSION['firstname'] = $row['firstname'];
                 
                 if (!$id) {
-                    $errors .= '<p>Username doesn\'t exist</p>';
+                    $errors .= '<p>Incorrect Username or Password combination</p>';
                 }else{
                     //get data
                     $retVal = mysql_query('SELECT password FROM users WHERE id = "'.$id.'"');
@@ -69,7 +69,33 @@
                     
                     //check for password match
                     if ($result == $password) {
+                        //save site access into array
+                        
+                        //get data
+                        $retVal = mysql_query('SELECT * FROM useraccess WHERE username = "'.$username.'"');
+                        
+                        //get arrays from data
+                        $sites = array();
+                        $siteFolders = array();
+                        
+                        while ($row = mysql_fetch_array($retVal, MYSQL_ASSOC)) {
+                            array_push($sites, $row['site']);
+                            
+                            //create array of site folders
+                            $retVal2 = mysql_query('SELECT folder FROM sitedetails WHERE site = "'.$row['site'].'"');
+                            $row2 = mysql_fetch_array($retVal2, MYSQL_ASSOC);
+                            array_push($siteFolders, $row2['folder']);
+                            
+                        }
+                        
+                        
+                        //pass arrays to SESSION
+                        $_SESSION['sites'] = $sites;                       
+                        $_SESSION['siteFolders'] = $siteFolders;                       
+                        //close connection and open user page
+                        mysql_close($con);
                         header('Location: userPage.php');
+                        
                     }else{
                         $errors .= '<p>Incorrect Username or Password combination</p>';
                     }

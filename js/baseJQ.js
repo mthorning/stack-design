@@ -1,9 +1,14 @@
 $(document).ready(function () {
 
-    $('.enquireBtn').click(openCloseContact);
-    
+    //open enquiry popup
+    $('.enquireBtn').click(function () {
+        openClosePopup('#contactContainer');
+    });
+
 });
 
-function openCloseContact () {
-    $('#containerForHiding').fadeToggle('slow');
+//FUNCTIONS
+
+function openClosePopup(container) {
+    $(container).fadeToggle('slow');
 }
