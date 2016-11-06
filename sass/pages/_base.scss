@@ -12,13 +12,22 @@ body {
     }
 }
 
+#mainStackH1 {
+            width: 100%;
+            color: white;
+            font-size: 120px;
+            display: inline-block;
+        }
+
 .btn-custom {
     margin: auto;
-    @include button($lightTextColor, rgba( 34, 52, 169, 1), $lightTextColor, $hBorder: $darkTextColor, $hColor: $lightTextColor);
+    @include button($lightTextColor, rgba( 34, 52, 169, 1), white);
 }
 
 .basicPageTemplate {
-    background: url(../img/carbonPattern.jpg);
+    background: url(../img/stackPattern.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     #rightColumn {
         height: 100%;
         border-left: 3px double $darkTextColor;

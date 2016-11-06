@@ -4,10 +4,11 @@ $(document).ready(function () {
     $('.enquireBtn').click(function () {
         openClosePopup('#contactContainer');
         setTimeout(function() {
-            $('#name').val('');
-            $('#email').val('');
-            $('#subject').val('');
-        }, 2000)
+            $('#name').val(null);
+            $('#email').val(null);
+            $('#subject').val(null);
+        },500)
+        clearTimeout();
     });
 
 });
@@ -15,5 +16,5 @@ $(document).ready(function () {
 //FUNCTIONS
 
 function openClosePopup(container) {
-    $(container).fadeToggle('slow');
+    $(container).fadeToggle(50);
 }

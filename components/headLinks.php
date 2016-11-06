@@ -1,4 +1,6 @@
-<?php session_start();
+<?php 
+
+session_start();
 
 if (isset($_SESSION['previous'])) {
    if (basename($_SERVER['PHP_SELF']) != $_SESSION['previous']) {
@@ -11,7 +13,7 @@ if (isset($_SESSION['previous'])) {
  ?>
 
 <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">

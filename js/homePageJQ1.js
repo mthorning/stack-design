@@ -10,10 +10,14 @@ $(document).ready(function () {
                     $('#slideBox2').slideUp();
                     setTimeout(function () {
                         $('#slideBox3').slideDown();
-                    }, 1000);
-                }, 6000);
-            }, 1000);
+                        setTimeout(function() {
+                            $('#slideBox3').hide();
+                            $('#aurora').slideUp('slow');
+                        }, 3000);
+                    }, 500);
+                }, 3000);
+            }, 500);
         }, 3000);
-    }, 1000);
+    }, 500);
     
 });

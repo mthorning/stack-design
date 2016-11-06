@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Stack-Design</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stack-Design</title>
 
-        <?php include 'components/headLinks.php'; ?>
+    <?php include 'components/headLinks.php'; ?>
 
-    </head>
+</head>
 
-    <body id="homePage">
+<body id="homePage">
 
-        <?php include 'components/header.php'; ?>
+    <?php 
+        if ($_SESSION['entry']) {
+            echo '
+                <script>
+                    $(function() {
+                        $("#aurora").hide();
+                    });
+                </script>';
+        }
+        include 'components/header.php'; 
+    ?>
 
+        <div id="mainStackH1Div">
+            <h1 id="mainStackH1"><img src="img/stackLogo.png">Stack-Design</h1>
+        </div>
+
+        <div id="aurora">
             <div id="slideBox1" class="slideBox">
-                <h1>Hello, my name is Matt and I build websites.</h1>
+                <h1><br />Hello, my name is Matt and I build websites.</h1>
             </div>
             <div id="slideBox2" class="slideBox">
-                <h1>If you own a small business and need a website to advertise your services whilst providing customers with an easy means of contacting you then I can help.</h1>
+                <h1>Running a business is a lot of work, the last thing you want is to spend more time than necessary setting up a website. </h1>
             </div>
             <div id="slideBox3" class="slideBox">
-                <h1>Please have a look at this site to see what we can do or click below to make an enquiry.</h1>
-                <button type="button" class="enquireBtn btn btn-lg btn-custom">Enquire Now!</button>
+                <h1>I can create a website for you and manage it when it is launched.<br /><br />Leaving you to do what you do best... </h1>
             </div>
+        </div>
+        <div id="black">
+            
+    </div>
 
-            <script type="text/javascript" src="js/baseJQ.js"></script>
-            <script type="text/javascript" src="js/homePageJQ.js"></script>
-            <?php include 'modules/navigationClassControl.php'; ?>
 
-    </body>
+        <script type="text/javascript" src="js/baseJQ.js"></script>
+        <?php 
+            if ($_SESSION['entry'] == 0) {
+                echo '
+                    <script type="text/javascript" src="js/homePageJQ1.js"></script>
+                ';
+                $_SESSION['entry'] = 1;
+            }else{
+                echo '                
+                    <script type="text/javascript" src="js/homePageJQ2.js"></script>
+                ';
+            }
+        ?>
+
+        <?php include 'modules/navigationClassControl.php'; ?>
+
+</body>
 
 </html>

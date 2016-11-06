@@ -89,7 +89,7 @@
                             openClosePopup('#contactContainer');
                             $('#email').val('<?php echo $email; ?>');
                             $('#name').val('<?php echo $firstname; ?>');
-                            $('#subject').val('contact from <?php echo $firstname; ?>');
+                            $('#subject').val('Contact from <?php echo $firstname; ?> at <?php echo $sites[0]; ?>');
                         });
                     });
                 </script>

@@ -110,7 +110,7 @@
     ?>
 
     <div class="container standardContainer">
-        <a href="home.php"><span class="glyphicon glyphicon-home"></span></a>
+        <a href="home.php" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
         <h1>Please enter your login details:</h1>
         <div <?php echo $class; ?> >
             <?php echo $errors; ?>
@@ -127,7 +127,7 @@
                 </label>
             </div>
             <br />
-            <input type="submit" class="btn btn-success pull-right">
+            <input type="submit" class="btn btn-lg btn-custom pull-right">
         </form>
     </div>
 

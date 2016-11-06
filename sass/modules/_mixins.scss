@@ -1,6 +1,6 @@
 @import '   breakpoints';
 
-@mixin button ($border, $bg, $color,$hBorder: null, $hBg: null, $hColor: null) {
+@mixin button ($border, $bg, $color,$hBorder: $border, $hBg: $bg, $hColor: $color) {
     border: 1px solid $border;
     background-color: $bg;
     color: $color;
@@ -12,6 +12,7 @@
 }
 
 @mixin standardContainer {
+    background-color: rgba( 219, 221, 224, 0.9 );
     float: none;
     border-radius: 25px;
     padding: 30px;
@@ -28,7 +29,6 @@
     @include xs {
         width: 100%;
     }
-    background-color: rgba(255, 255, 255, 1);
     box-shadow: 5px 5px 8px $darkGrey;
 }
 

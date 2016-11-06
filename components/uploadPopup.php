@@ -8,7 +8,7 @@
             <br />
             <form action="fileUpload.php" method="post" enctype="multipart/form-data">
                 <input type="file" name="uploaded"  class="btn-file">
-                <input type="submit" value="Upload File" class="btn btn-primary">
+                <input type="submit" value="Upload File" class="btn btn-custom">
             </form>            
         </div>
     </div>

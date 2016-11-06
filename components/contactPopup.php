@@ -8,13 +8,13 @@
             <form action="" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name.">
+                    <input class="form-control" type="text" id="name" name="name" placeholder="Name">
                     <label for="email">Email:</label>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Enter your email address">
+                    <input class="form-control" type="email" id="email" name="email" placeholder="Email address">
                     <label for="subject">Subject:</label>
                     <input class="form-control" type="text" id="subject" name="subject" placeholder="What is the subject of your message?">
-                    <label for="comment">Enquiry:</label>
-                    <textarea class="form-control" name="comment" id="comment" rows="5" placeholder="Enter your enquiry."></textarea>
+                    <label for="comment">Message:</label>
+                    <textarea class="form-control" name="comment" id="comment" rows="5" placeholder="What is your message?"></textarea>
                     <input type="submit" class="btn btn-custom">
                 </div>
             </form>

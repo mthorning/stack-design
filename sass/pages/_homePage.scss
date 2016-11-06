@@ -2,24 +2,49 @@
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    background: url(../img/aurora.jpg) no-repeat center center;
+    background: #000 url(../img/mountains.jpg) no-repeat;
     background-size: cover;
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-end;
+    background-size: cover;
+    @include verticalAlign;
+    #aurora {
+        background: url(../img/aurora.jpg) no-repeat center center;
+        background-size: cover;
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    #black {
+        display:none;
+        background: #000;
+        background-size: cover;
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
     .slideBox {
         display: none;
-        margin: auto 30px auto 0;
+        position: absolute;
+        top: 25%;
+        left: 52%;
+        z-index: 3;
+        margin: auto;
         color: $lightTextColor;
         text-align: right;
-        width: 40%;
+        width: 45%;
+        height: 50%;
         h1 {
-            text-align: justify;
+            text-align: left;
         }
-        .btn-custom {
-        margin: auto;
-        @include button($lightTextColor, rgba( 34, 52, 169, 0.5), $lightTextColor, $hBg: rgba( 34, 52, 169, 1), $hColor: $lightTextColor );
     }
+    #mainStackH1Div {
+        height: 100%;
+        width: 100%;
+        @include verticalAlign;
+        #mainStackH1 {
+            text-align: center;
+            margin: auto;
+        }
     }
 }

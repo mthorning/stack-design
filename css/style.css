@@ -9,17 +9,26 @@ body {
     font-size: 1.1em;
     text-align: justify; }
 
+#mainStackH1 {
+  width: 100%;
+  color: white;
+  font-size: 120px;
+  display: inline-block; }
+
 .btn-custom {
   margin: auto;
   border: 1px solid #d1d1d1;
   background-color: #2234a9;
-  color: #d1d1d1; }
+  color: white; }
   .btn-custom:hover {
-    color: #d1d1d1;
+    background-color: #2234a9;
+    color: white;
     box-shadow: 2px 2px 8px #1c1c1c; }
 
 .basicPageTemplate {
-  background: url(../img/carbonPattern.jpg); }
+  background: url(../img/stackPattern.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
   .basicPageTemplate #rightColumn {
     height: 100%;
     border-left: 3px double #1e1e1e; }
@@ -34,12 +43,12 @@ body {
     text-align: left; }
 
 .standardContainer {
+  background-color: rgba(219, 221, 224, 0.9);
   float: none;
   border-radius: 25px;
   padding: 30px;
   margin: 90px auto;
   width: 75%;
-  background-color: white;
   box-shadow: 5px 5px 8px #1a1818; }
   @media screen and (max-width: 480px) {
     .standardContainer {
@@ -67,11 +76,6 @@ body {
     margin: auto;
     text-align: center;
     text-decoration: none; }
-    #landingPage a h1 {
-      width: 100%;
-      color: white;
-      font-size: 120px;
-      display: inline-block; }
 
 nav .navbar-header .navbar-brand {
   padding: 2px 0 1px 3px; }
@@ -127,29 +131,47 @@ nav #navbarContactBtn {
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-  background: url(../img/aurora.jpg) no-repeat center center;
+  background: #000 url(../img/mountains.jpg) no-repeat;
   background-size: cover;
-  position: relative;
+  background-size: cover;
   display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-end; }
+  align-items: center; }
+  #homePage #aurora {
+    background: url(../img/aurora.jpg) no-repeat center center;
+    background-size: cover;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
+  #homePage #black {
+    display: none;
+    background: #000;
+    background-size: cover;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
   #homePage .slideBox {
     display: none;
-    margin: auto 30px auto 0;
+    position: absolute;
+    top: 25%;
+    left: 52%;
+    z-index: 3;
+    margin: auto;
     color: #d1d1d1;
     text-align: right;
-    width: 40%; }
+    width: 45%;
+    height: 50%; }
     #homePage .slideBox h1 {
-      text-align: justify; }
-    #homePage .slideBox .btn-custom {
-      margin: auto;
-      border: 1px solid #d1d1d1;
-      background-color: rgba(34, 52, 169, 0.5);
-      color: #d1d1d1; }
-      #homePage .slideBox .btn-custom:hover {
-        background-color: #2234a9;
-        color: #d1d1d1;
-        box-shadow: 2px 2px 8px #1c1c1c; }
+      text-align: left; }
+  #homePage #mainStackH1Div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center; }
+    #homePage #mainStackH1Div #mainStackH1 {
+      text-align: center;
+      margin: auto; }
 
 #clientLoginPage .container {
   min-height: 400px; }
