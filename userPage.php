@@ -94,8 +94,6 @@
                     });
                 </script>
 
-                <?php include 'modules/navigationClassControl.php'; ?>
-
 </body>
 
 </html>

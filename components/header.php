@@ -1,4 +1,3 @@
-<?php include 'modules/inc.title.php'; ?>
 <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
     <!--default for white or inverse for black-->
     <div class="container-fluid">
@@ -15,8 +14,8 @@
             <ul class="nav navbar-nav">
                 <li id="home"><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                 <li id="about"><a href="about.php">About</a></li>
-                <li><a id="navbarContactBtn" class="enquireBtn">Contact</a></li>
-                <li><a id="clientArea" href="clientLogin.php">Client Area</a></li>
+                <li id="userPage"><a href="userPage.php">Client Area</a></li>
+                <li id="navbarContactBtn"><a class="enquireBtn">Contact</a></li>
             </ul>
         </div>
     </div>

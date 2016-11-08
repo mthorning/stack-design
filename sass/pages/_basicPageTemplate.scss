@@ -1,0 +1,28 @@
+.basicPageTemplate {
+    background: url(../img/stackPattern.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+     h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $brightColor;
+        }
+    .container {
+            margin: 100px auto 0;  
+        }
+    .containerWrapper {
+        display: none;
+        display: flex;
+        flex-direction: column; 
+        #rightColumn {
+            height: 100%;
+            border-left: 3px double $darkTextColor;
+        }
+        ul {
+            text-align: left;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 body {
   font-family: 'Space Mono', monospace;
-  color: #1e1e1e;
+  color: #2b2b2b;
   cursor: default; }
   body p {
     text-indent: 30px; }
@@ -8,6 +8,13 @@ body {
   body li {
     font-size: 1.1em;
     text-align: justify; }
+  body .black {
+    background: #000;
+    background-size: cover;
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%; }
 
 #mainStackH1 {
   width: 100%;
@@ -25,36 +32,17 @@ body {
     color: white;
     box-shadow: 2px 2px 8px #1c1c1c; }
 
-.basicPageTemplate {
-  background: url(../img/stackPattern.jpg) no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-  .basicPageTemplate #rightColumn {
-    height: 100%;
-    border-left: 3px double #1e1e1e; }
-  .basicPageTemplate h1,
-  .basicPageTemplate h2,
-  .basicPageTemplate h3,
-  .basicPageTemplate h4,
-  .basicPageTemplate h5,
-  .basicPageTemplate h6 {
-    color: #ff6619; }
-  .basicPageTemplate ul {
-    text-align: left; }
-
 .standardContainer {
   background-color: rgba(219, 221, 224, 0.9);
   float: none;
   border-radius: 25px;
   padding: 30px;
-  margin: 90px auto;
   width: 75%;
   box-shadow: 5px 5px 8px #1a1818; }
   @media screen and (max-width: 480px) {
     .standardContainer {
       border-radius: 0;
-      padding: 10px;
-      margin: 50px auto 0 auto; } }
+      padding: 10px; } }
   @media screen and (max-width: 768px) {
     .standardContainer {
       width: 90vw; } }
@@ -66,7 +54,7 @@ body {
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-  background: url(../img/mountains.jpg) no-repeat;
+  background: url(../img/mountains.jpg) no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center; }
@@ -76,6 +64,8 @@ body {
     margin: auto;
     text-align: center;
     text-decoration: none; }
+    #landingPage a h1 {
+      color: white; }
 
 nav .navbar-header .navbar-brand {
   padding: 2px 0 1px 3px; }
@@ -131,21 +121,13 @@ nav #navbarContactBtn {
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-  background: #000 url(../img/mountains.jpg) no-repeat;
+  background: #000 url(../img/cairn.jpg) no-repeat;
   background-size: cover;
   background-size: cover;
   display: flex;
   align-items: center; }
   #homePage #aurora {
     background: url(../img/aurora.jpg) no-repeat center center;
-    background-size: cover;
-    z-index: 2;
-    position: absolute;
-    height: 100%;
-    width: 100%; }
-  #homePage #black {
-    display: none;
-    background: #000;
     background-size: cover;
     z-index: 2;
     position: absolute;
@@ -176,7 +158,7 @@ nav #navbarContactBtn {
 #clientLoginPage .container {
   min-height: 400px; }
   #clientLoginPage .container a {
-    color: #1e1e1e; }
+    color: #2b2b2b; }
   #clientLoginPage .container .alert {
     width: 75%;
     margin: 20px auto; }
@@ -198,5 +180,28 @@ nav #navbarContactBtn {
 
 #userPage .btn {
   margin: 30px; }
+
+.basicPageTemplate {
+  background: url(../img/stackPattern.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .basicPageTemplate h1,
+  .basicPageTemplate h2,
+  .basicPageTemplate h3,
+  .basicPageTemplate h4,
+  .basicPageTemplate h5,
+  .basicPageTemplate h6 {
+    color: #ff6619; }
+  .basicPageTemplate .container {
+    margin: 100px auto 0; }
+  .basicPageTemplate .containerWrapper {
+    display: none;
+    display: flex;
+    flex-direction: column; }
+    .basicPageTemplate .containerWrapper #rightColumn {
+      height: 100%;
+      border-left: 3px double #2b2b2b; }
+    .basicPageTemplate .containerWrapper ul {
+      text-align: left; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+<xml>
+    <section>
+        <id>aboutMe</id>
+        <title>About Me</title>
+        <para>I have always had an interest in computer programming but it is only recently, at the age of 32, that I became fully commited to following programming as a career. I decided that web design would be the best path to take initially; I hope to move into software programming as well at some point. To learn the basics I enrolled on a few online courses but most of my learning has taken place through figuring things out as I go along.</para>
+        <para>I work as a Work Area Manager at Royal Mail which is a full time job, I have a young daughter and am currently renovating a house with my partner so fitting things in can be quite a struggle! As such, I am being realistic about the projects I can take on.</para>
+        <para>The purpose of this site is to build up a portfolio of work through creating websites for small businesses. Please have a look through and contact me with any queries you may have.</para>
+    </section>
+    <section>
+        <id>aboutStackDesign</id>
+        <title>About Stack-Design</title>
+        <para>I started Stack-Design as a means of educating myself. I hope that the site will serve as a professional portfolio for myself whilst at the same time advertising my services and allowing my clients to see changes to their developing sites as they are made.</para>
+        <para>My intention is to carry on my work on this project alongside my career - my intention is to work somewhere developing either software or web applications.</para>
+        <para>It is vitally important with something such as computer programming that I "keep my eye in" so that I do not lose the skills I have learnt. This is why I will keep up my work on this project, I want to keep my client's sites up and running and if this business takes off and I can work from home then all the better!</para>
+    </section>
+    <section>
+        <id>blog</id>
+        <title>My blog</title>
+        <para>fshdklfhdlskfhlkdsjlfkjdslkfjlkdsjfl</para>
+        <para>fshdklfhdlskfhlkdsjlfkjdslkfjlkdsjfl</para>
+        <para>fshdklf   hdlskfhlkdsjlfkjdslkfjlkdsjfl</para>
+        <para>fshdklfhdlskfhlkdsjlfkjdslkfjlkdsjfl</para>
+    </section>
+</xml>

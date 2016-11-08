@@ -132,7 +132,6 @@
     </div>
 
     <script type="text/javascript" src="js/baseJQ.js"></script>
-    <?php include 'modules/navigationClassControl.php'; ?>
 
 </body>
     

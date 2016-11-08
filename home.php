@@ -41,26 +41,16 @@
                 <h1>I can create a website for you and manage it when it is launched.<br /><br />Leaving you to do what you do best... </h1>
             </div>
         </div>
-        <div id="black">
-            
-    </div>
-
 
         <script type="text/javascript" src="js/baseJQ.js"></script>
         <?php 
             if ($_SESSION['entry'] == 0) {
                 echo '
-                    <script type="text/javascript" src="js/homePageJQ1.js"></script>
+                    <script type="text/javascript" src="js/homePageJQ.js"></script>
                 ';
                 $_SESSION['entry'] = 1;
-            }else{
-                echo '                
-                    <script type="text/javascript" src="js/homePageJQ2.js"></script>
-                ';
             }
         ?>
-
-        <?php include 'modules/navigationClassControl.php'; ?>
 
 </body>
 

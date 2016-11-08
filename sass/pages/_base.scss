@@ -10,7 +10,17 @@ body {
         font-size: 1.1em;
         text-align: justify;
     }
+    .black {
+        background: #000;
+        background-size: cover;
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
 }
+
+
 
 #mainStackH1 {
             width: 100%;
@@ -22,28 +32,6 @@ body {
 .btn-custom {
     margin: auto;
     @include button($lightTextColor, rgba( 34, 52, 169, 1), white);
-}
-
-.basicPageTemplate {
-    background: url(../img/stackPattern.jpg) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    #rightColumn {
-        height: 100%;
-        border-left: 3px double $darkTextColor;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: $brightColor;
-    }
-    ul {
-        text-align: left;
-    }
-    
 }
 
 .standardContainer {

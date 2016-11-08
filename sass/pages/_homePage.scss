@@ -2,21 +2,12 @@
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    background: #000 url(../img/mountains.jpg) no-repeat;
+    background: #000 url(../img/cairn.jpg) no-repeat;
     background-size: cover;
     background-size: cover;
     @include verticalAlign;
     #aurora {
         background: url(../img/aurora.jpg) no-repeat center center;
-        background-size: cover;
-        z-index: 2;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
-    #black {
-        display:none;
-        background: #000;
         background-size: cover;
         z-index: 2;
         position: absolute;
