@@ -2,27 +2,51 @@
     background: url(../img/stackPattern.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
-     h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: $brightColor;
-        }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $brightColor;
+    }
     .container {
-            margin: 100px auto 0;  
-        }
+        margin: 100px auto 0;
+    }
     .containerWrapper {
         display: none;
         display: flex;
-        flex-direction: column; 
-        #rightColumn {
-            height: 100%;
-            border-left: 3px double $darkTextColor;
-        }
-        ul {
-            text-align: left;
+        flex-direction: column;
+        .menu {
+            text-align: right;
+            padding-top: 40px;
+            ul {
+                text-align: left;
+                list-style: none;
+                li {
+                    text-align: center;
+                    width: 100%;
+                    border-bottom: 1px dotted #636363;
+                    border-top: none;
+                    padding: 5px;
+                    &:hover {
+                        cursor: pointer;
+                        a {
+                            color: $brightColor;
+                        }
+                    }
+                    a {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        text-decoration: none;
+                        color: $darkTextColor
+                    }
+                }
+                li:first-child {
+                    border-top: 1px dotted #636363;
+                }
+            }
         }
     }
 }

@@ -17,23 +17,22 @@
     <?php include 'components/header.php'; ?>
         <div class="containerWrapper">
             <div class="container standardContainer">
-                <div id="bio" class="row">
-                    <div id="content" class="col-lg-8">
-                    </div>
-                    <div id="menu" class="col-lg-3 col-lg-offset-1">
-                        <ul id="menuItems">
-                           
-                        </ul>
-                    </div>
+                <div id="content" class="col-lg-8">
                 </div>
-            </div>         
+                <div class="col-lg-4 menu">
+                    <ul id="menuItems" class="pull-right">
+
+                    </ul>
+                </div>
+            </div>
         </div>
 
+
         <script type="text/javascript" src="js/baseJQ.js"></script>
-    
+
         <script type="text/javascript" src="js/about.js">
         </script>
-  
+
 </body>
 
 </html>

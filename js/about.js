@@ -3,7 +3,7 @@ $(function () {
     updateMenu();
 
     //on side menu click
-    $('#menu').on('click', '.xmlChange', function (e) {
+    $('#menuItems').on('click', '.xmlChange', function (e) {
         e.preventDefault();
         console.log(this + ' clicked');
         updateContent(this.id);
