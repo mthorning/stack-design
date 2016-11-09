@@ -10,7 +10,7 @@ $(document).ready(function () {
         }, 500)
         clearTimeout();
     });
-
+    
 });
 
 //FUNCTIONS
@@ -18,3 +18,4 @@ $(document).ready(function () {
 function openClosePopup(container) {
     $(container).fadeToggle(50);
 }
+    

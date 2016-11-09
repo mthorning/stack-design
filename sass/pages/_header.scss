@@ -1,4 +1,10 @@
 nav {
+    a {
+        &:hover {
+            color: $brightColor!important;
+            text-decoration: none;
+        }
+    }
     .navbar-header {
         .navbar-brand {
             padding: 2px 0 1px 3px;
@@ -10,5 +16,13 @@ nav {
     }
     #navbarContactBtn {
         cursor: pointer;
+    }
+    #logOutBtnDiv {
+        height: 50px;
+        @include verticalAlign;
+        p,
+        a {
+            color: $lightTextColor;
+        }
     }
 }

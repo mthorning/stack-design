@@ -13,25 +13,25 @@
 </head>
 
 <body id="userPage" class="basicPageTemplate">
-    <?php include 'components/header.php'; ?>
-        <?php include 'components/uploadPopup.php'; ?>
-            <?php
+    <?php  
+        if (!isset($_SESSION['username'])) {
+            header('Location: clientLogin.php');
+        }else{
             $username = $_SESSION['username'];
             $firstname = $_SESSION['firstname'];
             $sites = $_SESSION['sites'];
             $siteFolders = $_SESSION['siteFolders'];
             $email = $_SESSION['email'];
-            
+
             if(count($sites) > 1) {
                 $multiAccess = true;
             }else{
                 $multiAccess = false;
             }
-    
-            if (!$username) {
-                header('Location: clientLogin.php');
-            }
-        ?>
+            include 'components/header.php'; 
+            include 'components/uploadPopup.php';
+        }
+    ?>
 
 
                 <div class="container standardContainer">

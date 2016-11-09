@@ -1,16 +1,15 @@
-#homePage {
+    #homePage {
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    background: #000 url(../img/cairn.jpg) no-repeat;
+    background: #000 url(../img/cairn.jpg) no-repeat bottom;
     background-size: cover;
-    background-size: cover;
-    @include verticalAlign;
     #aurora {
         background: url(../img/aurora.jpg) no-repeat center center;
         background-size: cover;
         z-index: 2;
         position: absolute;
+        top: 0;
         height: 100%;
         width: 100%;
     }
@@ -30,9 +29,7 @@
         }
     }
     #mainStackH1Div {
-        height: 100%;
-        width: 100%;
-        @include verticalAlign;
+        padding-top: 100px;
         #mainStackH1 {
             text-align: center;
             margin: auto;

@@ -67,6 +67,9 @@ body {
     #landingPage a h1 {
       color: white; }
 
+nav a:hover {
+  color: #ff6619 !important;
+  text-decoration: none; }
 nav .navbar-header .navbar-brand {
   padding: 2px 0 1px 3px; }
   nav .navbar-header .navbar-brand > h4 {
@@ -74,6 +77,13 @@ nav .navbar-header .navbar-brand {
     padding-right: 20px; }
 nav #navbarContactBtn {
   cursor: pointer; }
+nav #logOutBtnDiv {
+  height: 50px;
+  display: flex;
+  align-items: center; }
+  nav #logOutBtnDiv p,
+  nav #logOutBtnDiv a {
+    color: #d1d1d1; }
 
 .containerForHiding {
   display: none; }
@@ -121,16 +131,14 @@ nav #navbarContactBtn {
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-  background: #000 url(../img/cairn.jpg) no-repeat;
-  background-size: cover;
-  background-size: cover;
-  display: flex;
-  align-items: center; }
+  background: #000 url(../img/cairn.jpg) no-repeat bottom;
+  background-size: cover; }
   #homePage #aurora {
     background: url(../img/aurora.jpg) no-repeat center center;
     background-size: cover;
     z-index: 2;
     position: absolute;
+    top: 0;
     height: 100%;
     width: 100%; }
   #homePage .slideBox {
@@ -147,10 +155,7 @@ nav #navbarContactBtn {
     #homePage .slideBox h1 {
       text-align: left; }
   #homePage #mainStackH1Div {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center; }
+    padding-top: 100px; }
     #homePage #mainStackH1Div #mainStackH1 {
       text-align: center;
       margin: auto; }
@@ -185,12 +190,7 @@ nav #navbarContactBtn {
   background: url(../img/stackPattern.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed; }
-  .basicPageTemplate h1,
-  .basicPageTemplate h2,
-  .basicPageTemplate h3,
-  .basicPageTemplate h4,
-  .basicPageTemplate h5,
-  .basicPageTemplate h6 {
+  .basicPageTemplate h1 {
     color: #ff6619; }
   .basicPageTemplate .container {
     margin: 100px auto 0; }
