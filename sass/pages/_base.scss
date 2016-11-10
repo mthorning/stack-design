@@ -33,7 +33,3 @@ body {
     margin: auto;
     @include button($lightTextColor, rgba( 34, 52, 169, 1), white);
 }
-
-.standardContainer {
-    @include standardContainer;
-}

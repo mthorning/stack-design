@@ -64,7 +64,7 @@ $(function () {
                         $('#content').append('<h1>' + title + '</h1>');
                         //write paragraphs
                         $(this).find('para').each(function () {
-                            var para = $(this).text();
+                            var para = $(this).html();
                             $('#content').append('<p>' + para + '</p>');
                         });
                     }

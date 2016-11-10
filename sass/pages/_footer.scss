@@ -1,0 +1,32 @@
+.footer-html {
+    padding-bottom: 100px;
+    min-height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+
+.footer-body {
+    heigth: 100%;
+    margin: 0;
+}
+
+#footer {
+    background-color: rgba( 0, 0, 0, 0.85 );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    text-align: right;
+    a,
+    a:visited {
+        margin: 20px 5px 0 0;
+        color: #d1d1d1;
+        text-decoration: none;
+        &:hover {
+            color: $brightColor;
+            text-decoration: none;
+        }
+    }
+}

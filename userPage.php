@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="footer-html" lang="en">
 
 <head>
 
@@ -12,13 +12,14 @@
 
 </head>
 
-<body id="userPage" class="basicPageTemplate">
+<body id="userPage" class="basicPageTemplate footer-body">
     <?php  
         if (!isset($_SESSION['username'])) {
             header('Location: clientLogin.php');
         }else{
             $username = $_SESSION['username'];
             $firstname = $_SESSION['firstname'];
+            $lastname = $_SESSION['lastname'];
             $sites = $_SESSION['sites'];
             $siteFolders = $_SESSION['siteFolders'];
             $email = $_SESSION['email'];
@@ -61,7 +62,9 @@
             ?>
 
                     <button id="view" type="button" class="btn btn-lg btn-custom">View Site</button>
-
+                    
+                    <?php include 'components/footer.php'; ?>
+                    
                 </div>
 
                 <script type="text/javascript" src="js/baseJQ.js"></script>
@@ -88,7 +91,7 @@
                         $('#sendMessage').click(function() {
                             openClosePopup('#contactContainer');
                             $('#email').val('<?php echo $email; ?>');
-                            $('#name').val('<?php echo $firstname; ?>');
+                            $('#name').val('<?php echo $firstname.' '. $lastname; ?>');
                             $('#subject').val('Contact from <?php echo $firstname; ?> at <?php echo $sites[0]; ?>');
                         });
                     });

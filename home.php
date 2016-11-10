@@ -35,10 +35,13 @@
                 <h1><br />Hello, my name is Matt and I build websites.</h1>
             </div>
             <div id="slideBox2" class="slideBox">
-                <h1>Running a business is a lot of work, the last thing you want is to spend more time than necessary setting up a website. </h1>
+                <h1>I believe that when you are running a business, creating a website should be the least of your worries. </h1>
             </div>
             <div id="slideBox3" class="slideBox">
-                <h1>I can create a website for you and manage it when it is launched.<br /><br />Leaving you to do what you do best... </h1>
+                <h1>I can create a website for you and manage it once it is launched.</h1>
+            </div>
+            <div id="slideBox4" class="slideBox">
+                <h1>Leaving you to do what you do best... </h1>
             </div>
         </div>
 

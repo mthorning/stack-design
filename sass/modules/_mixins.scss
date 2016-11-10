@@ -14,7 +14,7 @@
 @mixin standardContainer {
     background-color: rgba( 219, 221, 224, 0.9 );
     float: none;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 30px;
     @include xs {
         border-radius: 0;

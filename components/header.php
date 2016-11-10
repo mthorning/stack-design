@@ -1,3 +1,5 @@
+<?php $_SESSION['currentPage'] = $_SERVER['PHP_SELF']; ?>
+
 <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
     <!--default for white or inverse for black-->
     <div class="container-fluid">
@@ -20,7 +22,6 @@
             <div id="logOutBtnDiv" class="pull-right">
                 <?php
                     if (isset($_SESSION['firstname'])) {
-                        $_SESSION['currentPage'] = $_SERVER['PHP_SELF'];
                         echo '
                             <p>Hello '.$_SESSION['firstname'].'. <a href="modules/logout.php">Log Out</a></p>';
                     }

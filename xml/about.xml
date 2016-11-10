@@ -2,23 +2,29 @@
     <section>
         <id>aboutMe</id>
         <title>About Me</title>
-        <para>I have always had an interest in computer programming but it is only recently, at the age of 32, that I became fully commited to following programming as a career. I decided that web design would be the best path to take initially; I hope to move into software programming as well at some point. To learn the basics I enrolled on a few online courses but most of my learning has taken place through figuring things out as I go along.</para>
-        <para>I work as a Work Area Manager at Royal Mail which is a full time job, I have a young daughter and am currently renovating a house with my partner so fitting things in can be quite a struggle! As such, I am being realistic about the projects I can take on.</para>
-        <para>The purpose of this site is to build up a portfolio of work through creating websites for small businesses. Please have a look through and contact me with any queries you may have.</para>
+        <para>I have always had an interest in computer programming but it is only recently, at the age of 32, that I became fully commited to following programming as a career. To learn the basics I enrolled on a few online courses but most of my learning has taken place through figuring things out as I go along.</para>
+        <para>I work as a Work Area Manager at Royal Mail which is a full time job, I have a young daughter and I am currently renovating a house with my partner so fitting things in can be quite a struggle! As such, I am being realistic about the projects I can take on.</para>
     </section>
     <section>
         <id>aboutStackDesign</id>
         <title>About Stack-Design</title>
-        <para>I started Stack-Design as a means of educating myself. I hope that the site will serve as a professional portfolio for myself whilst at the same time advertising my services and allowing my clients to see changes to their developing sites as they are made.</para>
-        <para>My intention is to carry on my work on this project alongside my career - my intention is to work somewhere developing either software or web applications.</para>
-        <para>It is vitally important with something such as computer programming that I "keep my eye in" so that I do not lose the skills I have learnt. This is why I will keep up my work on this project, I want to keep my client's sites up and running and if this business takes off and I can work from home then all the better!</para>
+        <para>I started Stack-Design as a means of educating myself and with the hope of acquiring some clients - I hope that the site will serve both as a professional portfolio for myself whilst at the same time advertising my services and helping my clients. The client area allows my customers to see the latest changes to their developing sites, message me with any comments or changes they would like to see and upload files for inclusion.</para>
+        <para>With very little in the way of overheads and keeping in mind that the work I do will serve me in the future as an example of my capabilities to future employers, I intend to keep my the costs for my services as low as possible.</para>
+        <para>It is vitally important with something such as computer programming that I "keep my eye in" so that I do not lose the skills I have learnt. Stack-Design serves this purpose, I experiment with unfamiliar technologies on my on site and then apply my skills when creating sites for businesses who contact me with the desire to get themselves online.</para>
     </section>
     <section>
         <id>services</id>
         <title>Services</title>
-        <para>I will create a website to your specification. I use the latest technologies to make responsive websites which will work on both computers and mobile phones.</para>
-        <para>Unlike other companies I do not build your website using a content management system such as Wordpress or Drupal (although I can if this is what you would like!). Because I build my websites from the ground up, I know exactly how they are put together which makes making changes a lot easier. </para>
-        <para>Once the website is built I can give you the files and collect payment if that is all you want me to do. Alternatively, for a monthly fee I will host your website for you and take care of maintenance as well as making any additions or amendments that you wish at time goes on.</para>
-        <para>As I work from home I have very low overheads, this saving will be passed on to you.</para>
+        <para><ul>
+                <li>I design fully responsive websites which look great on any device.</li>
+                <li>I can host your site for you.</li>
+                <li>I can set up and hire the domain name of your choice.</li>
+                <li>I can create email addresses for your site and set up email clients on your devices.</li>
+                <li>I can maintain your site, ensuring that there is always a backup should anything happen to the server.</li>
+                <li>I can manage your site, making amendments and additions as required.</li>
+            </ul></para>
+        <para>Unlike other companies I do not build your website using a content management system such as Wordpress or Drupal (although I can if this is what you would like!). Building my websites from the ground up means that I know exactly how they are put together, giving me total control over the look and functionality of the site. </para>
+        <para>Once the website is built I can give you the files and collect payment if that is all you want me to do. Alternatively, for a monthly fee I will host your website for you and take care of maintenance as well as making any additions or amendments that you wish as time goes on.</para>
+        <para>Please feel free to contact me with any questions, just click the contact button above. If you would prefer to talk than message then simply message me your phone number and I will call you back.</para>
     </section>
 </xml>

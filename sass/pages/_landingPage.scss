@@ -1,12 +1,10 @@
 #landingPage {
     height: 100vh;
     max-height: 100vh;
-    overflow: hidden;
-    background: url(../img/mountains.jpg) no-repeat center center;
+    background: url(../img/mountains.jpg) no-repeat bottom left;
     background-size: cover;
     @include verticalAlign;
     a {
-        
         width: 100%;
         height: 40%;
         margin: auto;

@@ -2,10 +2,10 @@
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    background: #000 url(../img/cairn.jpg) no-repeat bottom;
+    background: #000 url(../img/cairn.jpg) bottom;
     background-size: cover;
     #aurora {
-        background: url(../img/aurora.jpg) no-repeat center center;
+        background: url(../img/aurora.jpg) no-repeat center;
         background-size: cover;
         z-index: 2;
         position: absolute;
@@ -20,7 +20,7 @@
         left: 52%;
         z-index: 3;
         margin: auto;
-        color: $lightTextColor;
+        color: white;
         text-align: right;
         width: 45%;
         height: 50%;

@@ -32,29 +32,10 @@ body {
     color: white;
     box-shadow: 2px 2px 8px #1c1c1c; }
 
-.standardContainer {
-  background-color: rgba(219, 221, 224, 0.9);
-  float: none;
-  border-radius: 25px;
-  padding: 30px;
-  width: 75%;
-  box-shadow: 5px 5px 8px #222222; }
-  @media screen and (max-width: 480px) {
-    .standardContainer {
-      border-radius: 0;
-      padding: 10px; } }
-  @media screen and (max-width: 768px) {
-    .standardContainer {
-      width: 90vw; } }
-  @media screen and (max-width: 480px) {
-    .standardContainer {
-      width: 100%; } }
-
 #landingPage {
   height: 100vh;
   max-height: 100vh;
-  overflow: hidden;
-  background: url(../img/mountains.jpg) no-repeat center center;
+  background: url(../img/mountains.jpg) no-repeat bottom left;
   background-size: cover;
   display: flex;
   align-items: center; }
@@ -131,10 +112,10 @@ nav #logOutBtnDiv {
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-  background: #000 url(../img/cairn.jpg) no-repeat bottom;
+  background: #000 url(../img/cairn.jpg) bottom;
   background-size: cover; }
   #homePage #aurora {
-    background: url(../img/aurora.jpg) no-repeat center center;
+    background: url(../img/aurora.jpg) no-repeat center;
     background-size: cover;
     z-index: 2;
     position: absolute;
@@ -148,7 +129,7 @@ nav #logOutBtnDiv {
     left: 52%;
     z-index: 3;
     margin: auto;
-    color: #d1d1d1;
+    color: white;
     text-align: right;
     width: 45%;
     height: 50%; }
@@ -183,44 +164,85 @@ nav #logOutBtnDiv {
       padding: 10px;
       margin: auto; }
 
-#userPage .btn {
-  margin: 30px; }
-
 .basicPageTemplate {
   background: url(../img/stackPattern.jpg) no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  height: 100%; }
   .basicPageTemplate h1 {
     color: #ff6619; }
-  .basicPageTemplate .container {
-    margin: 100px auto 0; }
-  .basicPageTemplate .containerWrapper {
-    display: none;
-    display: flex;
-    flex-direction: column; }
-    .basicPageTemplate .containerWrapper .menu {
-      text-align: right;
-      padding-top: 40px; }
-      .basicPageTemplate .containerWrapper .menu ul {
-        text-align: left;
-        list-style: none; }
-        .basicPageTemplate .containerWrapper .menu ul li {
-          text-align: center;
+  .basicPageTemplate .standardContainer {
+    background-color: rgba(219, 221, 224, 0.9);
+    float: none;
+    border-radius: 15px;
+    padding: 30px;
+    width: 75%;
+    box-shadow: 5px 5px 8px #222222;
+    margin: 75px auto 30px; }
+    @media screen and (max-width: 480px) {
+      .basicPageTemplate .standardContainer {
+        border-radius: 0;
+        padding: 10px; } }
+    @media screen and (max-width: 768px) {
+      .basicPageTemplate .standardContainer {
+        width: 90vw; } }
+    @media screen and (max-width: 480px) {
+      .basicPageTemplate .standardContainer {
+        width: 100%; } }
+    .basicPageTemplate .standardContainer button {
+      margin: 30px; }
+  .basicPageTemplate .menu {
+    text-align: right;
+    padding-top: 40px; }
+    .basicPageTemplate .menu ul {
+      text-align: left;
+      list-style: none; }
+      .basicPageTemplate .menu ul li {
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px dotted #636363;
+        border-top: none;
+        padding: 5px; }
+        .basicPageTemplate .menu ul li a {
+          display: block;
+          height: 100%;
           width: 100%;
-          border-bottom: 1px dotted #636363;
-          border-top: none;
-          padding: 5px; }
-          .basicPageTemplate .containerWrapper .menu ul li:hover {
-            cursor: pointer; }
-            .basicPageTemplate .containerWrapper .menu ul li:hover a {
-              color: #ff6619; }
-          .basicPageTemplate .containerWrapper .menu ul li a {
-            display: block;
-            height: 100%;
-            width: 100%;
-            text-decoration: none;
-            color: #2b2b2b; }
-        .basicPageTemplate .containerWrapper .menu ul li:first-child {
+          text-decoration: none;
+          color: #2b2b2b; }
+        .basicPageTemplate .menu ul li:hover {
+          cursor: pointer; }
+          .basicPageTemplate .menu ul li:hover a {
+            color: #ff6619; }
+        .basicPageTemplate .menu ul li:first-child {
           border-top: 1px dotted #636363; }
+
+.footer-html {
+  padding-bottom: 100px;
+  min-height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative; }
+
+.footer-body {
+  heigth: 100%;
+  margin: 0; }
+
+#footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  text-align: right; }
+  #footer a,
+  #footer a:visited {
+    margin: 20px 5px 0 0;
+    color: #d1d1d1;
+    text-decoration: none; }
+    #footer a:hover,
+    #footer a:visited:hover {
+      color: #ff6619;
+      text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

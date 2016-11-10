@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="footer-html" lang="en">
 
 <head>
 
@@ -12,27 +12,24 @@
 
 </head>
 
-<body class="basicPageTemplate">
+<body class="basicPageTemplate footer-body">
 
     <?php include 'components/header.php'; ?>
-        <div class="containerWrapper">
-            <div class="container standardContainer">
-                <div id="content" class="col-lg-8">
-                </div>
-                <div class="col-lg-4 menu">
-                    <ul id="menuItems" class="pull-right">
+        <div class="container standardContainer">
+            <div id="content" class="col-lg-8">
+            </div>
+            <div class="col-lg-4 menu">
+                <ul id="menuItems" class="pull-right">
 
-                    </ul>
-                </div>
+                </ul>
             </div>
         </div>
-
-
+        <?php include 'components/footer.php'; ?>
         <script type="text/javascript" src="js/baseJQ.js"></script>
 
         <script type="text/javascript" src="js/about.js">
         </script>
-
+        
 </body>
 
 </html>
