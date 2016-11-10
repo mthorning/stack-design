@@ -111,11 +111,18 @@
     ?>
 
     <div class="container standardContainer">
-        <a href="<?php echo $_SESSION['currentPage']; ?>" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+        <a href="<?php 
+                    if (isset($_SESSION['currentPage'])) {
+                        echo $_SESSION['currentPage']; 
+                    }else{
+                        echo 'home.php.';
+                    }                 
+                 ?>" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
         <h1>Please enter your login details:</h1>
         <div <?php echo $class; ?> >
             <?php echo $errors; ?>
         </div>
+
         <form action="" method="post" class="form-inline">
             <div class="form-group">
                 <label for="username">Username:
