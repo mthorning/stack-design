@@ -1,0 +1,47 @@
+#blogPage {
+    .container {
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+        width: 75%;
+        @include md {
+            width: 90vw;
+        }
+        @include xs {
+            width: 100%;
+        }
+        #content {
+            .headImg {
+                background-size: cover;
+                width: 150px;
+                height: 150px;
+                border: 1px solid #9c9a9a;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                margin: auto;
+            }
+            h1 {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            img {
+                max-width: 20%;
+                max-height: 200px;
+                &:nth-child(even) {
+                    float: right;
+                }
+                &:nth-child(odd) {
+                    float: left;
+                }
+            }
+        }
+        #menu {
+            height: 100%;
+            border-left: 1px dashed rgb( 143, 141, 141);
+            @include sm {
+                display: none;
+            }
+        }
+    }
+}

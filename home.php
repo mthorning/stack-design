@@ -19,7 +19,7 @@
             echo '
                 <script>
                     $(function() {
-                        $("#aurora").hide();
+                        $("#welcomeSequence").hide();
                     });
                 </script>';
         }
@@ -30,7 +30,7 @@
             <h1 id="mainStackH1"><img src="img/stackLogo.png">Stack-Design</h1>
         </div>
 
-        <div id="aurora">
+        <div id="welcomeSequence">
             <div id="slideBox1" class="slideBox">
                 <h1><br />Hello, my name is Matt and I build websites.</h1>
             </div>

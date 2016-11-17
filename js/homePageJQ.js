@@ -1,31 +1,32 @@
 $(document).ready(function () {
 
-    $('.black').hide();
-
     setTimeout(function () {
-        $('#slideBox1').slideDown();
         setTimeout(function () {
-            $('#slideBox1').slideUp();
+            $('#slideBox1').slideDown(1000);
             setTimeout(function () {
-                $('#slideBox2').slideDown();
+                $('#slideBox1').slideUp(1000);
                 setTimeout(function () {
-                    $('#slideBox2').slideUp();
+                    $('#slideBox2').slideDown(1000);
                     setTimeout(function () {
-                        $('#slideBox3').slideDown();
+                        $('#slideBox2').slideUp(1000);
                         setTimeout(function () {
-                            $('#slideBox3').slideUp();
+                            $('#slideBox3').slideDown(1000);
                             setTimeout(function () {
-                                $('#slideBox4').slideDown();
+                                $('#slideBox3').slideUp(1000);
                                 setTimeout(function () {
-                                    $('#slideBox3').hide();
-                                    $('#aurora').slideUp();
-                                }, 3000);
-                            }, 700);
-                        }, 3000);
-                    }, 700);
-                }, 3000);
-            }, 700);
-        }, 3000);
+                                    $('#slideBox4').slideDown(1000);
+                                    setTimeout(function () {
+                                        $('#slideBox4').slideUp(1000, function () {
+                                            $('#welcomeSequence').slideUp(1400);
+                                        });
+                                    }, 3000);
+                                }, 700);
+                            }, 3000);
+                        }, 700);
+                    }, 3000);
+                }, 700);
+            }, 3000);
+        }, 700);
     }, 700);
 
     clearTimeout();

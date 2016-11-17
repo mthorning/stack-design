@@ -2,6 +2,12 @@ body {
     font-family: 'Space Mono', monospace;
     color: $darkTextColor;
     cursor: default;
+    a {
+        &:hover {
+            color: $brightColor!important;
+            text-decoration: none;
+        }
+    }
     p {
         text-indent: 30px;
     }

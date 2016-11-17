@@ -14,29 +14,22 @@
 
 <body class="basicPageTemplate">
     <?php
-$msg = '';
-$msgClass = '';
-$ok = 1;
-?>
-        <?php   
-        session_start();
+        $msg = '';
+        $msgClass = '';
+        $ok = 1; 
         $siteFolders = $_SESSION['siteFolders'];
         $target = 'C:/xampp/htdocs/uploads/'.$siteFolders[0].'/';
+    
         if (!file_exists($target)) {
             mkdir($target, 0777, true);
         }
         $target = $target.time().'-'.basename($_FILES['uploaded']['name']);
         $uploaded_size = $_FILES['uploaded']['size'];
         $uploaded_type = $_FILES['uploaded']['type']; 
-        //Size condition
-        if ($uploaded_size > 400000) {
-            echo '<p class="text-center">Your file is too large</p>';
-            $ok = 0;
-        }
         
         //file limit type condition
         if ($uploaded_type == 'text/php') {
-            echo '<p>No PHP files allowed</p>';
+            $msg .= '<p class="text-center">File type not allowed</p>';
             $ok = 0;
         }
         
@@ -48,24 +41,28 @@ $ok = 1;
             if (move_uploaded_file($_FILES['uploaded']['tmp_name'], $target)) {
                 $msg .= '<p class="text-center">The file '.basename($_FILES['uploaded']['name']).' has been uploaded</p>';
                 $msgClass = 'alert alert-success';
+            }elseif ($_FILES['uploaded']['error'] == 1){
+                $msg .='<p class="text-center">File size exceeds 1.8MB, please reduce file size.</p>';
+                $msgClass = 'alert alert-danger';
             }else{
-                $msg .= '<p class="text-center">Sorry, there was a problem uploading your file</p>';
+                $msg .= '<p class="text-center">Sorry, there was a problem uploading your file.</p>';
                 $msgClass = 'alert alert-danger';
             }
+                
         }
+        
 ?>
 
-            <?php include 'components/header.php'; ?>
+        <?php include 'components/header.php'; ?>
 
-                <div class="container standardContainer">
-                    <div class="<?php echo $msgClass; ?>">
-                        <?php echo $msg; ?>
-                    </div>
-                    <a class="pull-right" href="userPage.php">...back</a>
+            <div class="container standardContainer">
+                <div class="<?php echo $msgClass; ?>">
+                    <?php echo $msg; ?>
                 </div>
+                <a class="pull-right" href="userPage.php">...back</a>
+            </div>
 
-                <script type="text/javascript" src="js/baseJQ.js"></script>
-                <?php include 'modules/navigationClassControl.php'; ?>
+            <script type="text/javascript" src="js/baseJQ.js"></script>
 
 </body>
 

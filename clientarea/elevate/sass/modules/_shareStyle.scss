@@ -1,0 +1,46 @@
+@import '_mixins';
+
+.shareBox {
+    $shareBorder: #7a7a7a;
+    text-align: center;
+    padding: 7px 15px;
+    @include sm {
+        padding: 3px 7px;
+    }
+    border: 1px solid $shareBorder;
+    border-radius: 20px;
+    overflow: hidden;
+    @include xs {
+        border: none;
+        overflow: visible;
+    }
+    .shareIcon {
+        border-right: 1px solid $shareBorder;
+        &:last-child {
+            border-right: none;
+        }
+        @include xs {
+            border: none;
+        }
+        @include md {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        @include xs {
+            padding: 0;
+        }
+    }
+    img {
+        width: 100%;
+        @include sm {
+            width: 75%;
+            padding: 0 1px;
+        }
+        @include xs {
+            width: 80%;
+            padding: 1px;
+        }
+        border: 0;
+        box-shadow: 0;
+    }
+}

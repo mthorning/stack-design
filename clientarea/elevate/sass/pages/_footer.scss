@@ -1,0 +1,46 @@
+#pageFooter {
+    p,
+    a {
+    }
+    color: $bgHighlight;
+    background-color: $darkGrey;
+    a {
+        color: $bgHighlight;
+        &:hover {
+            color: $colHighlight;
+            text-decoration: none;
+        }
+    }
+    #repsBadge {
+        width: 50%;
+        margin: auto;
+        img {
+            width: 50%;
+            @include md {
+                width: 80%;
+            }
+            @include sm {
+                width: 50%;
+            }
+        }
+    }
+    text-align: center;
+    #followBoxContainer {
+        padding: 20px;
+        @include sm {
+            padding: 100px;
+        }
+        @include xs {
+            padding: 10px;
+        }
+        margin-bottom: 10px;
+    }
+    #designCredit {
+        text-align: right;
+        line-height: 100px;
+        p,
+        a {
+            font-size: inherit;
+        }
+    }
+}
