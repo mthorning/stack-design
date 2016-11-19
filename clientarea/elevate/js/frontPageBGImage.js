@@ -1,3 +1,0 @@
-$(function () {
-    $('#indexPage').addClass('fixedScenery');
-});
