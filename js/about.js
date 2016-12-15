@@ -1,44 +1,39 @@
 $(function () {
-    
-    updateMenu();
 
+    var id;
+
+    updateMenu();
+    alert(id);
     //on side menu click
-    $('#menuItems').on('click', '.xmlChange', function (e) {
-        e.preventDefault();
-        console.log(this + ' clicked');
-        updateContent(this.id);
+    $(window).on('hashchange', function() {
+        id = window.location.hash.substring(1);
+        updateContent(id);
     });
     
 //FUNCTIONS
 
     function updateMenu() {
         //side menu creation
-         var itemId ='';
-        //clear menu
         $('#menuItems').html('');
         //populate menu
         $.ajax({
             type: 'GET'
-            , url: 'xml/about.xml'
-             , dataType: 'xml'
-            , success: function (xml) {
-                $(xml).find('section').each(function () {
-                    var itemName = $(this).find('title').text();
-                    itemId = $(this).find('id').text();
-                    $('#menuItems').prepend('<li><a href="#" id="' + itemId + '" class="xmlChange">' + itemName + '</a></li>');
-                    console.log('in loop id: ' + itemId);
+            , url: 'about.json'
+            , data: {get_param: 'value'}
+            , dataType: 'json'
+            , success: function (about) {
+                window.alert(about);
+                $.each(about, function (index, element) {
+                    $('#menuItems').prepend('<li><a href="#' + element.id + '">' + element.title + '</a></li>');
                 });
-                console.log('out of loop id: ' + itemId);
-                console.log('out of function id: ' + itemId);
-                updateContent(itemId);
             }
             ,error: function (XMLHttpRequest, textStatus, errorThrown) {
-    if (textStatus == 'Unauthorized') {
-        console.log('Unauthorized Status Error: ' + errorThrown);
-    } else {
-        console.log('Other Error: ' + errorThrown);
-    }
-}
+                if (textStatus == 'Unauthorized') {
+                    console.log('Unauthorized Status Error: ' + errorThrown);
+                } else {
+                    console.log('Other Error: ' + errorThrown);
+                }
+            }
 
         });
     }
@@ -52,26 +47,22 @@ $(function () {
 
         $.ajax({
             type: 'GET'
-            , url: 'xml/about.xml'
-            , dataType: 'xml'
-            , success: function (xml) {
-                $(xml).find('section').each(function () {
-                    var subCheck = $(this).find('id').text();
-                    //of subjects match:
+            , url: 'about.json'
+            , dataType: 'json'
+            , success: function (about) {
+                $.each(about, function(index, element) {
+                    var subCheck = element.id;
+                    //if subjects match:
                     if (subCheck == subject) {
-                        var title = $(this).find('title').text();
                         //write title
-                        $('#content').append('<h1>' + title + '</h1>');
+                        $('#content').append('<h1>' + element.title + '</h1>');
                         //write paragraphs
-                        $(this).find('para').each(function () {
-                            var para = $(this).html();
-                            $('#content').append('<p>' + para + '</p>');
-                        });
-                    }
+                        $('#content').append(element.bodyOfText);
+                    };
                 });
             }
             , error: function () {
-                alert('The XML document could not be read.');
+                alert('The document could not be read.');
             }
         });
     }
