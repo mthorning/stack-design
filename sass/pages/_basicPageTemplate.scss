@@ -9,7 +9,13 @@
   }
 
   .standardContainer {
+    @include xs {
+      margin: 50px auto 0;
+    }
     @include standard-container;
+
+    // display: flex;
+    // flex-direction: row-reverse;
     margin: 90px auto 30px;
 
     button {
@@ -18,7 +24,7 @@
   }
 
   .menu {
-    padding-top: 40px;
+    padding-top: 20px;
     text-align: right;
 
     ul {

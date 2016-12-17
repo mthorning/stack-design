@@ -1,11 +1,15 @@
 #homePage {
-  background: #000 url('../img/italy.jpg') bottom;
+  background: #000 url('../img/italy.jpg');
+  background-position: 55% 80%;
   background-size: cover;
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
 
   #welcomeSequence {
+    @include sm {
+      display: none;
+    }
     background: url('../img/malpas.jpg') no-repeat center;
     background-size: cover;
     height: 100%;
@@ -34,7 +38,6 @@
 
   #mainStackH1Div {
     padding-top: 100px;
-
     #mainStackH1 {
       margin: auto;
       text-align: center;

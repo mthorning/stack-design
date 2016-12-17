@@ -1,6 +1,7 @@
 #landingPage {
   @include vertical-align;
-  background: url('../img/engineHouse.jpg') no-repeat bottom left;
+  background: url('../img/engineHouse.jpg') no-repeat;
+  background-position: 16% 70%;
   background-size: cover;
   height: 100vh;
   max-height: 100vh;

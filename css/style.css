@@ -26,22 +26,28 @@ body {
   width: 100%; }
   @media screen and (max-width: 1200px) {
     #mainStackH1 {
-      font-size: 80px; } }
+      font-size: 110px; } }
   @media screen and (max-width: 992px) {
     #mainStackH1 {
       font-size: 80px; } }
   @media screen and (max-width: 768px) {
     #mainStackH1 {
-      font-size: 15px; } }
+      font-size: 50px; } }
+  @media screen and (max-width: 480px) {
+    #mainStackH1 {
+      font-size: 30px; } }
   @media screen and (max-width: 1200px) {
     #mainStackH1 img {
-      width: 80px; } }
+      width: 150px; } }
   @media screen and (max-width: 992px) {
     #mainStackH1 img {
-      width: 100px; } }
+      width: 110px; } }
   @media screen and (max-width: 768px) {
     #mainStackH1 img {
-      width: 15px; } }
+      width: 80px; } }
+  @media screen and (max-width: 480px) {
+    #mainStackH1 img {
+      width: 40px; } }
 
 .btnCustom {
   background-color: #2234a9;
@@ -56,7 +62,8 @@ body {
 #landingPage {
   align-items: center;
   display: flex;
-  background: url("../img/engineHouse.jpg") no-repeat bottom left;
+  background: url("../img/engineHouse.jpg") no-repeat;
+  background-position: 16% 70%;
   background-size: cover;
   height: 100vh;
   max-height: 100vh; }
@@ -129,7 +136,8 @@ nav #logOutBtnDiv {
       margin-bottom: 5px; }
 
 #homePage {
-  background: #000 url("../img/italy.jpg") bottom;
+  background: #000 url("../img/italy.jpg");
+  background-position: 55% 80%;
   background-size: cover;
   height: 100vh;
   max-height: 100vh;
@@ -142,6 +150,9 @@ nav #logOutBtnDiv {
     top: 0;
     width: 100%;
     z-index: 2; }
+    @media screen and (max-width: 768px) {
+      #homePage #welcomeSequence {
+        display: none; } }
   #homePage .slideBox {
     color: white;
     display: none;
@@ -201,18 +212,23 @@ nav #logOutBtnDiv {
     margin: 90px auto 30px; }
     @media screen and (max-width: 480px) {
       .basicPageTemplate .standardContainer {
+        margin: 50px auto 0; } }
+    @media screen and (max-width: 480px) {
+      .basicPageTemplate .standardContainer {
         border-radius: 0;
         padding: 10px; } }
     @media screen and (max-width: 768px) {
       .basicPageTemplate .standardContainer {
+        padding: 10px;
         width: 90vw; } }
     @media screen and (max-width: 480px) {
       .basicPageTemplate .standardContainer {
+        padding: 0;
         width: 100%; } }
     .basicPageTemplate .standardContainer button {
       margin: 30px; }
   .basicPageTemplate .menu {
-    padding-top: 40px;
+    padding-top: 20px;
     text-align: right; }
     .basicPageTemplate .menu ul {
       list-style: none;

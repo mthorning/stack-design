@@ -34,13 +34,16 @@ body {
 
 #mainStackH1 {
   @include lg {
-    font-size: 80px;
+    font-size: 110px;
   }
   @include md {
     font-size: 80px;
   }
   @include sm {
-    font-size: 15px;
+    font-size: 50px;
+  }
+  @include xs {
+    font-size: 30px;
   }
 
   color: white;
@@ -50,15 +53,18 @@ body {
 
   img {
     @include lg {
-      width: 80px;
+      width: 150px;
     }
     @include md {
-      width: 100px;
+      width: 110px;
     }
     @include sm {
-      width: 15px;
+      width: 80px;
     }
-  } 
+    @include xs {
+      width: 40px;
+    }
+  }
 }
 
 .btnCustom {

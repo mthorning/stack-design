@@ -41,7 +41,7 @@ $(function () {
                         $('#content').append('<h1>' + element.title + '</h1>');
                         //write paragraphs
                         $('#content').append(element.bodyOfText);
-                    };
+                    }
                 });
         });
     }

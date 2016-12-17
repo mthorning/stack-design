@@ -16,12 +16,12 @@
 
     <?php include 'components/header.php'; ?>
         <div class="container standardContainer">
-            <div id="content" class="col-lg-8">
-            </div>
-            <div class="col-lg-4 menu">
+        <div class="col-md-4 col-md-push-8 menu col-xs-12">
                 <ul id="menuItems" class="pull-right">
 
                 </ul>
+            </div>
+            <div id="content" class="col-md-8 col-md-pull-4 col-xs-12">
             </div>
         </div>
         <?php include 'components/footer.php'; ?>
