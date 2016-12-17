@@ -56,8 +56,10 @@ nav .navbar-header .navbar-brand {
   nav .navbar-header .navbar-brand > h4 {
     margin-top: 2px;
     padding-right: 20px; }
+
 nav #navbarContactBtn {
   cursor: pointer; }
+
 nav #logOutBtnDiv {
   height: 50px;
   display: flex;
@@ -91,7 +93,7 @@ nav #logOutBtnDiv {
     @media (max-width: 700px) {
       .popUpContainer .popUpFormContainer {
         width: 400px;
-        height: 428.57143px; } }
+        height: 428.571428571px; } }
     @media (max-width: 450px) {
       .popUpContainer .popUpFormContainer {
         width: 300px;

@@ -1,4 +1,4 @@
-@import '   breakpoints';
+@import '_breakpoints';
 
 @mixin button ($border, $bg, $color,$hBorder: $border, $hBg: $bg, $hColor: $color) {
     border: 1px solid $border;
