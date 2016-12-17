@@ -1,50 +1,59 @@
 .basicPageTemplate {
-    background: url(../img/stackPattern.jpg) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100%;
-    h1 {
-        color: $brightColor;
+  background: url('../img/stackPattern.jpg') no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+
+  h1 {
+    color: $bright-color;
+  }
+
+  .standardContainer {
+    @include standard-container;
+    margin: 90px auto 30px;
+
+    button {
+      margin: 30px;
     }
-    .standardContainer {
-        @include standardContainer;
-        margin: 90px auto 30px;
-        button {
-            margin: 30px;
+  }
+
+  .menu {
+    padding-top: 40px;
+    text-align: right;
+
+    ul {
+      list-style: none;
+      text-align: left;
+
+      li {
+        border-bottom: 1px dotted #636363;
+        border-top: 0;
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+
+        a {
+          color: $dark-text-color;
+          display: block;
+          height: 100%;
+          text-decoration: none;
+          width: 100%;
         }
-    }   
-    .menu {
-        text-align: right;
-        padding-top: 40px;
-        ul {
-            text-align: left;
-            list-style: none;
-            li {
-                text-align: center;
-                width: 100%;
-                border-bottom: 1px dotted #636363;
-                border-top: none;
-                padding: 5px;
-                a {
-                    display: block;
-                    height: 100%;
-                    width: 100%;
-                    text-decoration: none;
-                    color: $darkTextColor
-                }
-                &:hover {
-                    cursor: pointer;
-                    a {
-                        color: $brightColor;
-                    }
-                }
-                &:first-child {
-                    border-top: 1px dotted #636363;
-                }
+
+        &:hover {
+          cursor: pointer;
+
+          a {
+            color: $bright-color;
             }
-            
         }
+
+        &:first-child {
+          border-top: 1px dotted #636363;
+        }
+      }
     }
+  }
 }
 
 

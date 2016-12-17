@@ -1,22 +1,27 @@
 nav {
-    .navbar-header {
-        .navbar-brand {
-            padding: 2px 0 1px 3px;
-            > h4 {
-                margin-top: 2px;
-                padding-right: 20px;
-            }
-        }
+  .navbar-header {
+    .navbar-brand {
+      padding: 2px 0 1px 3px;
+
+      > h4 {
+        margin-top: 2px;
+        padding-right: 20px;
+      }
     }
-    #navbarContactBtn {
-        cursor: pointer;
+  }
+
+  #navbarContactBtn {
+    cursor: pointer;
+  }
+
+  #logOutBtnDiv {
+    @include vertical-align;
+
+    height: 50px;
+
+    p,
+    a {
+      color: $light-text-color;
     }
-    #logOutBtnDiv {
-        height: 50px;
-        @include verticalAlign;
-        p,
-        a {
-            color: $lightTextColor;
-        }
-    }
+  }
 }

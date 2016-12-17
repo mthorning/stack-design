@@ -1,7 +1,7 @@
 body {
-  font-family: 'Space Mono', monospace;
   color: #2b2b2b;
-  cursor: default; }
+  cursor: default;
+  font-family: 'Space Mono', monospace; }
   body a:hover {
     color: #ff6619 !important;
     text-decoration: none; }
@@ -14,40 +14,58 @@ body {
   body .black {
     background: #000;
     background-size: cover;
-    z-index: 2;
-    position: absolute;
     height: 100%;
-    width: 100%; }
+    position: absolute;
+    width: 100%;
+    z-index: 2; }
 
 #mainStackH1 {
-  width: 100%;
   color: white;
+  display: inline-block;
   font-size: 120px;
-  display: inline-block; }
+  width: 100%; }
+  @media screen and (max-width: 1200px) {
+    #mainStackH1 {
+      font-size: 80px; } }
+  @media screen and (max-width: 992px) {
+    #mainStackH1 {
+      font-size: 80px; } }
+  @media screen and (max-width: 768px) {
+    #mainStackH1 {
+      font-size: 15px; } }
+  @media screen and (max-width: 1200px) {
+    #mainStackH1 img {
+      width: 80px; } }
+  @media screen and (max-width: 992px) {
+    #mainStackH1 img {
+      width: 100px; } }
+  @media screen and (max-width: 768px) {
+    #mainStackH1 img {
+      width: 15px; } }
 
-.btn-custom {
-  margin: auto;
-  border: 1px solid #d1d1d1;
+.btnCustom {
   background-color: #2234a9;
-  color: white; }
-  .btn-custom:hover {
+  border: 1px solid #d1d1d1;
+  color: white;
+  margin: auto; }
+  .btnCustom:hover {
     background-color: #2234a9;
-    color: white;
-    box-shadow: 2px 2px 8px #1c1c1c; }
+    box-shadow: 2px 2px 8px #1c1c1c;
+    color: white; }
 
 #landingPage {
-  height: 100vh;
-  max-height: 100vh;
-  background: url(../img/engineHouse.jpg) no-repeat bottom left;
-  background-size: cover;
+  align-items: center;
   display: flex;
-  align-items: center; }
+  background: url("../img/engineHouse.jpg") no-repeat bottom left;
+  background-size: cover;
+  height: 100vh;
+  max-height: 100vh; }
   #landingPage a {
-    width: 100%;
     height: 40%;
     margin: auto;
     text-align: center;
-    text-decoration: none; }
+    text-decoration: none;
+    width: 100%; }
     #landingPage a h1 {
       color: white; }
 
@@ -61,9 +79,9 @@ nav #navbarContactBtn {
   cursor: pointer; }
 
 nav #logOutBtnDiv {
-  height: 50px;
+  align-items: center;
   display: flex;
-  align-items: center; }
+  height: 50px; }
   nav #logOutBtnDiv p,
   nav #logOutBtnDiv a {
     color: #d1d1d1; }
@@ -72,32 +90,32 @@ nav #logOutBtnDiv {
   display: none; }
 
 .popUpContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
   background-color: rgba(0, 0, 0, 0.9);
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
   .popUpContainer .popUpFormContainer {
-    width: 600px;
-    height: popUpWidth;
     background-color: white;
     border: 1px solid black;
     border-radius: 30px;
+    height: popUpWidth;
     margin: auto;
-    padding: 15px; }
+    padding: 15px;
+    width: 600px; }
     @media (max-width: 700px) {
       .popUpContainer .popUpFormContainer {
-        width: 400px;
-        height: 428.571428571px; } }
+        height: 428.571428571px;
+        width: 400px; } }
     @media (max-width: 450px) {
       .popUpContainer .popUpFormContainer {
-        width: 300px;
-        height: 480px; } }
+        height: 480px;
+        width: 300px; } }
     .popUpContainer .popUpFormContainer .formClose {
       float: right; }
       .popUpContainer .popUpFormContainer .formClose:hover {
@@ -107,55 +125,55 @@ nav #logOutBtnDiv {
     .popUpContainer .popUpFormContainer .btn {
       float: right;
       margin: 20px; }
-    .popUpContainer .popUpFormContainer .form-control {
+    .popUpContainer .popUpFormContainer .formControl {
       margin-bottom: 5px; }
 
 #homePage {
+  background: #000 url("../img/italy.jpg") bottom;
+  background-size: cover;
   height: 100vh;
   max-height: 100vh;
-  overflow: hidden;
-  background: #000 url(../img/italy.jpg) bottom;
-  background-size: cover; }
+  overflow: hidden; }
   #homePage #welcomeSequence {
-    background: url(../img/malpas.jpg) no-repeat center;
+    background: url("../img/malpas.jpg") no-repeat center;
     background-size: cover;
-    z-index: 2;
+    height: 100%;
     position: absolute;
     top: 0;
-    height: 100%;
-    width: 100%; }
+    width: 100%;
+    z-index: 2; }
   #homePage .slideBox {
-    display: none;
-    position: absolute;
-    top: 25%;
-    left: 52%;
-    z-index: 3;
-    margin: auto;
     color: white;
+    display: none;
+    height: 50%;
+    left: 52%;
+    margin: auto;
+    position: absolute;
     text-align: right;
+    top: 25%;
     width: 45%;
-    height: 50%; }
+    z-index: 3; }
     #homePage .slideBox h1 {
       text-align: left; }
   #homePage #mainStackH1Div {
     padding-top: 100px; }
     #homePage #mainStackH1Div #mainStackH1 {
-      text-align: center;
-      margin: auto; }
+      margin: auto;
+      text-align: center; }
 
 #clientLoginPage .container {
   min-height: 400px; }
   #clientLoginPage .container a {
     color: #2b2b2b; }
   #clientLoginPage .container .alert {
-    width: 75%;
-    margin: 20px auto; }
+    margin: 20px auto;
+    width: 75%; }
     @media screen and (max-width: 480px) {
       #clientLoginPage .container .alert {
         width: 100%; } }
   #clientLoginPage .container form {
-    width: 75%;
-    margin: auto; }
+    margin: auto;
+    width: 75%; }
     @media screen and (max-width: 480px) {
       #clientLoginPage .container form {
         width: 100%; } }
@@ -163,23 +181,23 @@ nav #logOutBtnDiv {
       margin-top: 30px; }
     #clientLoginPage .container form label,
     #clientLoginPage .container form input {
-      padding: 10px;
-      margin: auto; }
+      margin: auto;
+      padding: 10px; }
 
 .basicPageTemplate {
-  background: url(../img/stackPattern.jpg) no-repeat;
-  background-size: cover;
+  background: url("../img/stackPattern.jpg") no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   height: 100%; }
   .basicPageTemplate h1 {
     color: #ff6619; }
   .basicPageTemplate .standardContainer {
     background-color: rgba(219, 221, 224, 0.9);
-    float: none;
     border-radius: 15px;
+    box-shadow: 5px 5px 8px #222;
+    float: none;
     padding: 30px;
     width: 75%;
-    box-shadow: 5px 5px 8px #222222;
     margin: 90px auto 30px; }
     @media screen and (max-width: 480px) {
       .basicPageTemplate .standardContainer {
@@ -194,23 +212,23 @@ nav #logOutBtnDiv {
     .basicPageTemplate .standardContainer button {
       margin: 30px; }
   .basicPageTemplate .menu {
-    text-align: right;
-    padding-top: 40px; }
+    padding-top: 40px;
+    text-align: right; }
     .basicPageTemplate .menu ul {
-      text-align: left;
-      list-style: none; }
+      list-style: none;
+      text-align: left; }
       .basicPageTemplate .menu ul li {
-        text-align: center;
-        width: 100%;
         border-bottom: 1px dotted #636363;
-        border-top: none;
-        padding: 5px; }
+        border-top: 0;
+        padding: 5px;
+        text-align: center;
+        width: 100%; }
         .basicPageTemplate .menu ul li a {
+          color: #2b2b2b;
           display: block;
           height: 100%;
-          width: 100%;
           text-decoration: none;
-          color: #2b2b2b; }
+          width: 100%; }
         .basicPageTemplate .menu ul li:hover {
           cursor: pointer; }
           .basicPageTemplate .menu ul li:hover a {
@@ -218,33 +236,30 @@ nav #logOutBtnDiv {
         .basicPageTemplate .menu ul li:first-child {
           border-top: 1px dotted #636363; }
 
-.footer-html {
-  padding-bottom: 100px;
-  min-height: 100%;
+.footerHtml {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 100px;
   position: relative; }
 
 .footer-body {
   height: 100%;
-  min-height: 100vh;
-  margin: 0; }
+  margin: 0;
+  min-height: 100vh; }
 
 #footer {
   background-color: rgba(0, 0, 0, 0.85);
-  position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
   height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
   text-align: right; }
-  #footer a,
-  #footer a:visited {
-    margin: 20px 5px 0 0;
+  #footer a, #footer:visited {
     color: #d1d1d1;
+    margin: 20px 5px 0 0;
     text-decoration: none; }
-    #footer a:hover,
-    #footer a:visited:hover {
+    #footer a:hover, #footer:visited:hover {
       color: #ff6619;
       text-decoration: none; }
 

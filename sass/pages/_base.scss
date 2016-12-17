@@ -1,41 +1,68 @@
 body {
-    font-family: 'Space Mono', monospace;
-    color: $darkTextColor;
-    cursor: default;
-    a {
-        &:hover {
-            color: $brightColor!important;
-            text-decoration: none;
-        }
+  color: $dark-text-color;
+  cursor: default;
+  font-family: 'Space Mono', monospace;
+
+  a {
+    &:hover {
+      color: $bright-color !important;
+      text-decoration: none;
     }
-    p {
-        text-indent: 30px;
-    }
-    p,
-    li {
-        font-size: 1.1em;
-        text-align: justify;
-    }
-    .black {
-        background: #000;
-        background-size: cover;
-        z-index: 2;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
+  }
+
+  p {
+    text-indent: 30px;
+  }
+
+  p,
+  li {
+    font-size: 1.1em;
+    text-align: justify;
+  }
+
+  .black {
+    background: #000;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
 }
 
 
 
 #mainStackH1 {
-            width: 100%;
-            color: white;
-            font-size: 120px;
-            display: inline-block;
-        }
+  @include lg {
+    font-size: 80px;
+  }
+  @include md {
+    font-size: 80px;
+  }
+  @include sm {
+    font-size: 15px;
+  }
 
-.btn-custom {
-    margin: auto;
-    @include button($lightTextColor, rgba( 34, 52, 169, 1), white);
+  color: white;
+  display: inline-block;
+  font-size: 120px;
+  width: 100%;  
+
+  img {
+    @include lg {
+      width: 80px;
+    }
+    @include md {
+      width: 100px;
+    }
+    @include sm {
+      width: 15px;
+    }
+  } 
+}
+
+.btnCustom {
+  @include button($light-text-color, rgba(34, 52, 169, 1), white);
+
+  margin: auto;
 }

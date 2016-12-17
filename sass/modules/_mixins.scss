@@ -1,46 +1,55 @@
-@import '_breakpoints';
+@import 'breakpoints';
 
-@mixin button ($border, $bg, $color,$hBorder: $border, $hBg: $bg, $hColor: $color) {
-    border: 1px solid $border;
-    background-color: $bg;
-    color: $color;
-    &:hover {
-        background-color: $hBg;
-        color: $hColor;
-        box-shadow: 2px 2px 8px #1c1c1c;
-    }
+@mixin button($border, $bg, $color, $h-border: $border, $h-bg: $bg, $h-color: $color) {
+  background-color: $bg;
+  border: 1px solid $border;
+  color: $color;
+
+  &:hover {
+    background-color: $h-bg;
+    box-shadow: 2px 2px 8px #1c1c1c;
+    color: $h-color;
+  }
 }
 
-@mixin standardContainer {
-    background-color: rgba( 219, 221, 224, 0.9 );
-    float: none;
-    border-radius: 15px;
-    padding: 30px;
-    @include xs {
-        border-radius: 0;
-        padding: 10px;
-    }
-    width: 75%;
-    @include sm {
-        width: 90vw;
-    }
-    @include xs {
-        width: 100%;
-    }
-    box-shadow: 5px 5px 8px $darkGrey;
+@mixin standard-container {
+  @include xs {
+    border-radius: 0;
+    padding: 10px;
+  }
+
+
+  @include sm {
+    width: 90vw;
+  }
+
+
+  @include xs {
+    width: 100%;
+  }
+
+
+  background-color: rgba(219, 221, 224, .9);
+  border-radius: 15px;
+  box-shadow: 5px 5px 8px $dark-grey;
+  float: none;
+  padding: 30px;
+  width: 75%;
 }
 
-@mixin borderedPic {
-    background-color: white;
-    border: 1px solid $bgHighlight;
-    padding: 5px;
-    border-radius: 8px;
-    @include xs {
-        padding: 0;
-    }
+@mixin bordered-pic {
+  @include xs {
+    padding: 0;
+  }
+
+
+  background-color: white;
+  border: 1px solid $bg-highlight;
+  border-radius: 8px;
+  padding: 5px;
 }
 
-@mixin verticalAlign {
-    display: flex;
-    align-items: center;
+@mixin vertical-align {
+  align-items: center;
+  display: flex;
 }

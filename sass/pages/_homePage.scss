@@ -1,38 +1,43 @@
-    #homePage {
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
-    background: #000 url(../img/italy.jpg) bottom;
+#homePage {
+  background: #000 url('../img/italy.jpg') bottom;
+  background-size: cover;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  #welcomeSequence {
+    background: url('../img/malpas.jpg') no-repeat center;
     background-size: cover;
-    #welcomeSequence {
-        background: url(../img/malpas.jpg) no-repeat center;
-        background-size: cover;
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .slideBox {
+    color: white;
+    display: none;
+    height: 50%;
+    left: 52%;
+    margin: auto;
+    position: absolute;
+    text-align: right;
+    top: 25%;
+    width: 45%;
+    z-index: 3;
+
+    h1 {
+      text-align: left;
     }
-    .slideBox {
-        display: none;
-        position: absolute;
-        top: 25%;
-        left: 52%;
-        z-index: 3;
-        margin: auto;
-        color: white;
-        text-align: right;
-        width: 45%;
-        height: 50%;
-        h1 {
-            text-align: left;
-        }
+  }
+
+  #mainStackH1Div {
+    padding-top: 100px;
+
+    #mainStackH1 {
+      margin: auto;
+      text-align: center;
     }
-    #mainStackH1Div {
-        padding-top: 100px;
-        #mainStackH1 {
-            text-align: center;
-            margin: auto;
-        }
-    }
+  }
 }

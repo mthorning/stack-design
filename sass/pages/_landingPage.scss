@@ -1,17 +1,19 @@
 #landingPage {
-    height: 100vh;
-    max-height: 100vh;
-    background: url(../img/engineHouse.jpg) no-repeat bottom left;
-    background-size: cover;
-    @include verticalAlign;
-    a {
-        width: 100%;
-        height: 40%;
-        margin: auto;
-        text-align: center;
-        text-decoration: none;
-        h1 {
-            color: white;
-        }
+  @include vertical-align;
+  background: url('../img/engineHouse.jpg') no-repeat bottom left;
+  background-size: cover;
+  height: 100vh;
+  max-height: 100vh;
+
+  a {
+    height: 40%;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    h1 {
+      color: white;
     }
+  }
 }

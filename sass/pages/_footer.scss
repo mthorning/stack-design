@@ -1,33 +1,34 @@
-.footer-html {
-    padding-bottom: 100px;
-    min-height: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    position: relative;
+.footerHtml {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 100px;
+  position: relative;
 }
 
 .footer-body {
-    height: 100%;
-    min-height: 100vh;
-    margin: 0;
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
 }
 
 #footer {
-    background-color: rgba( 0, 0, 0, 0.85 );
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    text-align: right;
-    a,
-    a:visited {
-        margin: 20px 5px 0 0;
-        color: #d1d1d1;
-        text-decoration: none;
-        &:hover {
-            color: $brightColor;
-            text-decoration: none;
-        }
+  background-color: rgba(0, 0, 0, .85);
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+
+  a,
+  &:visited {
+    color: #d1d1d1;
+    margin: 20px 5px 0 0;
+    text-decoration: none;
+
+    &:hover {
+      color: $bright-color;
+      text-decoration: none;
     }
+  }
 }

@@ -1,30 +1,35 @@
 #clientLoginPage {
-    .container {
-        a {
-            color: $darkTextColor;
-        }
-        min-height: 400px;
-        .alert {
-            width: 75%;
-            margin: 20px auto;
-            @include xs {
-                width: 100%;
-            }
-        }
-        form {
-            width: 75%;
-            @include xs {
-                width: 100%;
-            }
-            margin: auto;
-            .btn {
-                margin-top: 30px;
-            }
-            label,
-            input {
-                padding: 10px;
-                margin: auto;
-            }
-        }
+  .container {
+    min-height: 400px;
+
+    a {
+      color: $dark-text-color;
     }
+
+    .alert {
+      @include xs {
+        width: 100%;
+      }
+      margin: 20px auto;
+      width: 75%;
+    }
+
+    form {
+      @include xs {
+        width: 100%;
+      }
+      margin: auto;
+      width: 75%;
+
+      .btn {
+        margin-top: 30px;
+      }
+
+      label,
+      input {
+        margin: auto;
+        padding: 10px;
+      }
+    }
+  }
 }
