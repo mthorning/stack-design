@@ -4,7 +4,7 @@
             <div class="closeContainer">
                 <span class="enquireBtn glyphicon glyphicon-remove formClose"></span>
             </div>
-            <h3>How can I help?</h3>
+            <div id="contactMessageBox"><h3>How can I help?</h3></div>
             <form action="" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>
