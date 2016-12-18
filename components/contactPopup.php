@@ -4,8 +4,9 @@
             <div class="closeContainer">
                 <span class="enquireBtn glyphicon glyphicon-remove formClose"></span>
             </div>
-            <div id="contactMessageBox"><h3>How can I help?</h3></div>
-            <form action="" method="post">
+            <br />
+            <div id="topMessage"><?php echo $topMessage ?></div>
+            <form action="enquiry.php" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input class="form-control" type="text" id="name" name="name" placeholder="Name">

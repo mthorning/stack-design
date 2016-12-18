@@ -1,4 +1,28 @@
-<?php $_SESSION['currentPage'] = $_SERVER['PHP_SELF']; ?>
+<?php
+$_SESSION['currentPage'] = $_SERVER['PHP_SELF'];
+
+$enquiryMade = 0;
+
+if (isset($_SESSION['errors'])) {
+    $enquiryMade = 1;
+    $topMessage = $_SESSION['errors'];
+    unset($_SESSION['errors']);
+} else {
+    $topMessage = '<h3>How can I help?</h3>';
+}
+
+?>
+
+<script>
+    $(function() {
+        var enquiryMade = <?php echo $enquiryMade; ?>;
+
+        if (enquiryMade) {
+            $("#contactContainer").show();
+        }
+    });
+   
+</script>
 
 <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
     <!--default for white or inverse for black-->

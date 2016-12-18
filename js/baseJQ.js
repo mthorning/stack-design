@@ -7,6 +7,7 @@ $(document).ready(function () {
             $('#name').val(null);
             $('#email').val(null);
             $('#subject').val(null);
+            $('#topMessage').html("<h3>How can I help?</h3>");
         }, 500);
         clearTimeout();
     });
