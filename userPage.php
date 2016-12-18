@@ -13,25 +13,25 @@
 </head>
 
 <body id="userPage" class="basicPageTemplate footer-body">
-    <?php  
-        if (!isset($_SESSION['username'])) {
-            header('Location: clientLogin.php');
-        }else{
-            $username = $_SESSION['username'];
-            $firstname = $_SESSION['firstname'];
-            $lastname = $_SESSION['lastname'];
-            $sites = $_SESSION['sites'];
-            $siteFolders = $_SESSION['siteFolders'];
-            $email = $_SESSION['email'];
+    <?php
+    if (!isset($_SESSION['username'])) {
+        header('Location: clientLogin.php');
+    } else {
+        $username = $_SESSION['username'];
+        $firstname = $_SESSION['firstname'];
+        $lastname = $_SESSION['lastname'];
+        $sites = $_SESSION['sites'];
+        $siteFolders = $_SESSION['siteFolders'];
+        $email = $_SESSION['email'];
 
-            if(count($sites) > 1) {
-                $multiAccess = true;
-            }else{
-                $multiAccess = false;
-            }
-            include 'components/header.php'; 
-            include 'components/uploadPopup.php';
+        if (count($sites) > 1) {
+            $multiAccess = true;
+        } else {
+            $multiAccess = false;
         }
+        include 'components/header.php';
+        include 'components/uploadPopup.php';
+    }
     ?>
 
 
@@ -43,22 +43,22 @@
                     <br />
                     <p>Click below to upload files, send a message or view the most recent developments to your website.</p>
                     
-                    <?php 
-                    if($multiAccess) {
+                    <?php
+                    if ($multiAccess) {
                         echo '<select id="selectSite">';
-                        for($i = 0; $i < count($sites); $i++) {
-                        echo '<option value="'.$siteFolders[$i].'">'.$sites[$i].'</option>';
-                    }
-                    echo '</select>'; 
+                        for ($i = 0; $i < count($sites); $i++) {
+                            echo '<option value="'.$siteFolders[$i].'">'.$sites[$i].'</option>';
+                        }
+                        echo '</select>';
                     }
             ?>
 
-            <?php 
-              if (!$multiAccess) {
-                  echo '<button id="upload" type="button" class="btn btn-lg btn-custom uploadBtn">Upload Files</button>';  
+            <?php
+            if (!$multiAccess) {
+                  echo '<button id="upload" type="button" class="btn btn-lg btn-custom uploadBtn">Upload Files</button>';
                   
                   echo '<button id="sendMessage" type="button" class="btn btn-lg btn-custom">Send a Message</button>';
-              }    
+            }
             ?>
 
                     <button id="view" type="button" class="btn btn-lg btn-custom">View Site</button>
@@ -71,13 +71,14 @@
 
                 <script type="text/javascript">
                     $(function () {
+                        var selected;
                         //view site button
                         var multiAccess = "<?php echo $multiAccess; ?>";
                         $('#view').click(function () {
-                            if (multiAccess == true) {
-                                var selected = $('#selectSite option:selected').val();
+                            if (multiAccess === true) {
+                                selected = $('#selectSite option:selected').val();
                             } else {
-                                var selected = "<?php echo $siteFolders[0]; ?>";
+                                selected = "<?php echo $siteFolders[0]; ?>";
                             }
                             window.location.href = 'clientarea/' + selected;
                         });
@@ -91,7 +92,7 @@
                         $('#sendMessage').click(function() {
                             openClosePopup('#contactContainer');
                             $('#email').val('<?php echo $email; ?>');
-                            $('#name').val('<?php echo $firstname.' '. $lastname; ?>');
+                            $('#name').val('<?php echo $firstname . ' ' . $lastname; ?>');
                             $('#subject').val('Contact from <?php echo $firstname; ?> at <?php echo $sites[0]; ?>');
                         });
                     });
