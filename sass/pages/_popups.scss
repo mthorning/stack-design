@@ -1,9 +1,10 @@
-.containerForHiding {
+.containerForHiding,
+#successMessage {
   display: none;
 }
 
 .popUpContainer {
-  background-color: rgba(0, 0, 0, .9);
+  background-color: $pop-up-bg-color;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -13,6 +14,14 @@
   top: 0;
   width: 100%;
   z-index: 2001;
+
+  .formClose {
+    float: right;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   .popUpFormContainer {
     @media (max-width: 700px) {
@@ -29,14 +38,38 @@
     height: popUpWidth;
     margin: auto;
     padding: 15px;
+    position: relative;
     width: $pop-up-width;
 
-    .formClose {
-      float: right;
+    #successMessage {
+      @extend .popUpFormContainer;
 
-      &:hover {
-        cursor: pointer;
+      border: 0;
+      height: 100%;
+      left: 0;
+      padding: -14px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      #alertContainer {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+
+        > img {
+          height: auto;
+          margin: auto;
+          width: 30%;
+        }
+
+        > div {
+          margin: auto;
+        }
       }
+
     }
 
     textarea {

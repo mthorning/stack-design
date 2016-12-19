@@ -3,6 +3,7 @@ session_start();
 
 $errors = '';
 
+$_SESSION['enquiryMade'] = true;
 $_SESSION['formName'] = $name = $_POST['name'];
 $_SESSION['formEmail'] = $email = $_POST['email'];
 $_SESSION['formSubject'] = $subject = $_POST['subject'];
@@ -43,8 +44,10 @@ if (!$message) {
 
 if ($errors) {
     $_SESSION['errors'] = '<div class="alert alert-danger">' . $errors . '</div>';
+    $_SESSION['success'] = false;
     header('location: ' . $_SESSION['currentPage']);
 } else {
+    $_SESSION['success'] = true;
     //email details
     $email_to = "matt@stack-design.co.uk";
     $email_subject = "Customer Enquiry";
@@ -72,5 +75,5 @@ if ($errors) {
     "CC:";
     mail($email_to, $email_subject, $email_message, $headers);
 
-    echo 'email sent';
+    header('location: ' . $_SESSION['currentPage']);
 }

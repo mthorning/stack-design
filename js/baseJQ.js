@@ -11,6 +11,7 @@ $(document).ready(function () {
             $('#comment').val(null);
             $('#topMessage').html("<h3>How can I help?</h3>");
         }, 100);
+            $('#successMessage').hide();
         clearTimeout();
     });
     
@@ -21,4 +22,4 @@ $(document).ready(function () {
 function openClosePopup(container) {
     $(container).fadeToggle(50);
 }
-    
+   

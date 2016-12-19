@@ -1,22 +1,33 @@
 <?php
 $_SESSION['currentPage'] = $_SERVER['PHP_SELF'];
 
-$enquiryMade = 0;
+    $enquiryMade = false;
+    $success = false;
 
-if (isset($_SESSION['errors'])) {
+//if enquiry has been made
+if (isset($_SESSION['enquiryMade'])) {
     $enquiryMade = 1;
-    $topMessage = $_SESSION['errors'];
+    $success = $_SESSION['success'];
 
-    $formName = $_SESSION['formName'];
-    $formEmail = $_SESSION['formEmail'];
-    $formSubject = $_SESSION['formSubject'];
-    $formMessage = $_SESSION['formMessage'];
+    //if enquiry was not a success
+    if (!$success) {
+        //set errors to variables
+        $topMessage = $_SESSION['errors'];
 
+        //save current user inputs
+        $formName = $_SESSION['formName'];
+        $formEmail = $_SESSION['formEmail'];
+        $formSubject = $_SESSION['formSubject'];
+        $formMessage = $_SESSION['formMessage'];
+    }
+    //remove errors from session variable
     unset($_SESSION['errors'], $_SESSION['formName'], $_SESSION['formEmail']);
-    unset($_SESSION['formSubject'], $_SESSION['formMessage']);
+    unset($_SESSION['formSubject'], $_SESSION['formMessage'], $_SESSION['success'], $_SESSION['enquiryMade']);
 } else {
+    //if no enquiry has been made
     $topMessage = '<h3>How can I help?</h3>';
 
+    //reset variables
     $formName = $formEmail = $formSubject = $formMessage = '';
 }
 
@@ -24,10 +35,14 @@ if (isset($_SESSION['errors'])) {
 
 <script>
     $(function() {
-        var enquiryMade = <?php echo $enquiryMade; ?>;
-
+        var enquiryMade = "<?php echo $enquiryMade; ?>";
+        var success = "<?php echo $success; ?>";
         if (enquiryMade) {
             $("#contactContainer").show();
+            if (success) {
+                $('#successMessage').show();
+                <?php $success = 0; ?>
+            }
         }
     });
    
