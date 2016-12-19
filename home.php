@@ -14,16 +14,16 @@
 
 <body id="homePage">
 
-    <?php 
-        if ($_SESSION['entry']) {
-            echo '
-                <script>
-                    $(function() {
-                        $("#welcomeSequence").hide();
-                    });
-                </script>';
-        }
-        include 'components/header.php'; 
+    <?php
+    if ($_SESSION['entry']) {
+        echo '
+        <script>
+            $(function() {
+                $("#welcomeSequence").hide();
+            });
+        </script>';
+    }
+    include 'components/header.php';
     ?>
 
         <div id="mainStackH1Div">

@@ -6,9 +6,18 @@ $enquiryMade = 0;
 if (isset($_SESSION['errors'])) {
     $enquiryMade = 1;
     $topMessage = $_SESSION['errors'];
-    unset($_SESSION['errors']);
+
+    $formName = $_SESSION['formName'];
+    $formEmail = $_SESSION['formEmail'];
+    $formSubject = $_SESSION['formSubject'];
+    $formMessage = $_SESSION['formMessage'];
+
+    unset($_SESSION['errors'], $_SESSION['formName'], $_SESSION['formEmail']);
+    unset($_SESSION['formSubject'], $_SESSION['formMessage']);
 } else {
     $topMessage = '<h3>How can I help?</h3>';
+
+    $formName = $formEmail = $formSubject = $formMessage = '';
 }
 
 ?>

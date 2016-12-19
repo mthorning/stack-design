@@ -5,10 +5,12 @@ $(document).ready(function () {
         openClosePopup('#contactContainer');
         setTimeout(function () {
             $('#name').val(null);
+            $('#name').focus();
             $('#email').val(null);
             $('#subject').val(null);
+            $('#comment').val(null);
             $('#topMessage').html("<h3>How can I help?</h3>");
-        }, 500);
+        }, 100);
         clearTimeout();
     });
     
