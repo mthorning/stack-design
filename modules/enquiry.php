@@ -9,11 +9,11 @@ $_SESSION['formEmail'] = $email = $_POST['email'];
 $_SESSION['formSubject'] = $subject = $_POST['subject'];
 $_SESSION['formMessage'] = $message = $_POST['comment'];
 
-$missingName = '<p><strong>Please enter your name.</strong></p>';
-$missingEmail = '<p><strong>Please enter your email.</strong></p>';
-$missingSubject = '<p><strong>Please enter your subject.</strong></p>';
-$missingMessage = '<p><strong>Please enter your message.</strong></p>';
-$invalidEmail = '<p><strong>Please enter a valid email address.</strong></p>';
+$missingName = '<p><strong><span class="glyphicon glyphicon-exclamation-sign"></span></strong> Please enter your name.</p>';
+$missingEmail = '<p><strong><span class="glyphicon glyphicon-exclamation-sign"></span></strong> Please enter your email.</p>';
+$missingSubject = '<p><strong><span class="glyphicon glyphicon-exclamation-sign"></span></strong> Please enter your subject.</p>';
+$missingMessage = '<p><strong><span class="glyphicon glyphicon-exclamation-sign"></span></strong> Please enter your message.</p>';
+$invalidEmail = '<p><strong><span class="glyphicon glyphicon-exclamation-sign"></span></strong> Please enter a valid email address.</p>';
 
 if (!$name) {
     $errors .= $missingName;
@@ -56,7 +56,7 @@ if ($errors) {
     $email_message =
     "<html>
         <body>
-            <img style='width: 20%; height: auto;' src='http://elevatehealthandfitness.co.uk/img/png/navbarLogo.png'>
+            <img style='width: 20%; height: auto;' src='http://stack-design.co.uk/img/Stack-Design logo.jpg'>
             <div style='padding: 5px;'>
                 <h2 Style='color: #001EF9;'>You have been contacted by ".ucwords($name).":</h2>
                 <h3 Style='color: #001EF9;'>Message:</h3>

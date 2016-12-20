@@ -24,18 +24,19 @@
   }
 
   .popUpFormContainer {
-    @media (max-width: 700px) {
-      height: $pop-up-width / 1.4;
-      width: $pop-up-width / 1.5;
+    @include sm {
+      width: 80%;
     }
-    @media (max-width: 450px) {
-      height: $pop-up-width / 1.25;
-      width: $pop-up-width / 2;
+    @include xs {
+      border-radius: $border-radius / 2;
+      margin: 0;
+      padding: 10px 5px;
+      width: 100%;
     }
+
     background-color: white;
     border: 1px solid black;
     border-radius: $border-radius;
-    height: popUpWidth;
     margin: auto;
     padding: 15px;
     position: relative;
