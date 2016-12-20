@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,13 +48,13 @@
         </div>
 
         <script type="text/javascript" src="js/baseJQ.js"></script>
-        <?php 
-            if ($_SESSION['entry'] == 0) {
-                echo '
-                    <script type="text/javascript" src="js/homePageJQ.js"></script>
-                ';
-                $_SESSION['entry'] = 1;
-            }
+        <?php
+        if (unset($_SESSION['entry'])) {
+            echo '
+                <script type="text/javascript" src="js/homePageJQ.js"></script>
+            ';
+            $_SESSION['entry'] = true;
+        }
         ?>
 
 </body>

@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +15,7 @@
 
     <body id="landingPage">
         <?php
-            $_SESSION['entry'] = 0;
+            unset($_SESSION['entry']);
         ?>
         <a href="home.php"><h1 id="mainStackH1"><img src="img/stackLogo.png">Stack-Design</h1></a>
 
