@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+ob_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -111,13 +114,7 @@
 ?>
 
 <div class="container standardContainer">
-    <a href="<?php
-    if (isset($_SESSION['currentPage'])) {
-        echo $_SESSION['currentPage'];
-    } else {
-        echo 'home.php.';
-    }
-    ?>" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+    <a href="home.php" class="pull-right"><span class="glyphicon glyphicon-remove"></span></a>
     <h1>Please enter your login details:</h1>
     <div <?php echo $class; ?> >
         <?php echo $errors; ?>
@@ -145,3 +142,4 @@
 
 
 </html>
+<?php ob_end_flush(); ?>

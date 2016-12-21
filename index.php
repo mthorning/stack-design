@@ -15,7 +15,8 @@
 
     <body id="landingPage">
         <?php
-            unset($_SESSION['entry']);
+            $entry = true;
+            $_SESSION['entry'] = $entry;
         ?>
         <a href="home.php"><h1 id="mainStackH1"><img src="img/stackLogo.png">Stack-Design</h1></a>
 

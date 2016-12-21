@@ -2,9 +2,11 @@
 
 if (isset($_SESSION['previous'])) {
     if (basename($_SERVER['PHP_SELF']) != $_SESSION['previous']) {
+        $tempEntry = $_SESSION['entry'];
+        $tempCurrentPage = $_SESSION['currentPage'];
         session_destroy();
-        ### or alternatively, you can use this for specific variables:
-        ### unset($_SESSION['varname']);
+        $_SESSION['entry'] = $tempEntry;
+        $_SESSION['currentPage'] = $tempCurrentPage;
     }
 }
 

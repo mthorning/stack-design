@@ -17,7 +17,13 @@
 <body id="homePage">
 
     <?php
-    if ($_SESSION['entry']) {
+    $entry = $_SESSION['entry'];
+    unset($_SESSION['entry']);
+    if ($entry) {
+        echo '
+            <script type="text/javascript" src="js/homePageJQ.js"></script>
+        ';
+    } else {
         echo '
         <script>
             $(function() {
@@ -25,6 +31,7 @@
             });
         </script>';
     }
+
     include 'components/header.php';
     ?>
 
@@ -48,14 +55,6 @@
         </div>
 
         <script type="text/javascript" src="js/baseJQ.js"></script>
-        <?php
-        if (unset($_SESSION['entry'])) {
-            echo '
-                <script type="text/javascript" src="js/homePageJQ.js"></script>
-            ';
-            $_SESSION['entry'] = true;
-        }
-        ?>
 
 </body>
 

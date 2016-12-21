@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+ob_start();
+?>
 
 <!DOCTYPE html>
 <html class="footer-html" lang="en">
@@ -103,3 +106,4 @@
 </body>
 
 </html>
+<?php ob_end_flush(); ?>

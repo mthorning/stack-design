@@ -67,6 +67,9 @@ body {
   background-size: cover;
   height: 100vh;
   max-height: 100vh; }
+  @media screen and (max-width: 768px) {
+    #landingPage {
+      display: block; } }
   #landingPage a {
     height: 40%;
     margin: auto;

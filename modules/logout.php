@@ -1,8 +1,11 @@
 <?php
+    ob_start();
     session_start();
-    $currentPage = $_SESSION['currentPage'];
+    $tempEntry = $_SESSION['entry'];
+    $tempCurrentPage = $_SESSION['currentPage'];
     session_destroy();
-    session_start();
-    $_SESSION['entry'] = 1;
-    header('Location: '.$currentPage);
-?>
+    $_SESSION['entry'] = $tempEntry;
+    $_SESSION['currentPage'] = $tempCurrentPage;
+    $headerLoc = 'Location: ' . $tempCurrentPage;
+    header($headerLoc);
+    ob_end_flush();
