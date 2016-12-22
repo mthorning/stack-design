@@ -1,4 +1,4 @@
-.basicPageTemplate {
+  .basicPageTemplate {
   background: url('../img/stackPattern.jpg') no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -67,7 +67,7 @@
 
   margin: 90px auto 30px;
 
-  button,
+  .btn-custom,
   .form-group > label {
     @include sm {
       margin: 10px auto;

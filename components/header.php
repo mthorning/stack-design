@@ -66,13 +66,13 @@ if (isset($_SESSION['enquiryMade'])) {
                 <li id="home"><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                 <li id="about"><a href="about.php">About</a></li>
                 <li id="userPage"><a href="userPage.php">Client Area</a></li>
-                <li id="navbarContactBtn"><a class="enquireBtn">Contact</a></li>
+                <li id="navbarContactBtn"><a href="#contactContainer">Contact</a></li>
             </ul>
             <div id="logOutBtnDiv" class="pull-right">
                 <?php
                 if (isset($_SESSION['username'])) {
                         echo '
-                            <p>Hello ' . $_SESSION['firstname'] . '. <a href="modules/logout.php">Log Out</a></p>';
+                            <p>Hello ' . $_SESSION['firstname'] . '. <a href="#" id="logOut">Log Out</a></p>';
                 }
                 ?>
             </div>

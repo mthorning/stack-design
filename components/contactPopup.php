@@ -1,12 +1,12 @@
 <section id="contactContainer" class="containerForHiding">
     <div class="container-fluid popUpContainer">
         <div class="popUpFormContainer">
-            <div class="closeContainer">
+            <div class="closeEnquiryContainer">
                 <span class="enquireBtn glyphicon glyphicon-remove formClose"></span>
             </div>
             <div id="successMessage">
                 <div class="closeContainer">
-                    <span class="enquireBtn glyphicon glyphicon-remove formClose"></span>
+                    <span glyphicon glyphicon-remove formClose"></span>
                 </div>
                 <div id="alertContainer">
                     <img src="img/greenTick.png" alt="Green tick mark">

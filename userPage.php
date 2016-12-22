@@ -60,9 +60,9 @@ ob_start();
 
             <?php
             if (!$multiAccess) {
-                  echo '<button id="upload" type="button" class="btn btn-lg btn-custom uploadBtn">Upload Files</button>';
+                  echo '<a href="#uploadContainer" id="upload" type="button" class="btn btn-lg btn-custom uploadBtn">Upload Files</a>';
                   
-                  echo '<button id="sendMessage" type="button" class="btn btn-lg btn-custom">Send a Message</button>';
+                  echo '<a href="#contactContainer" id="sendMessage" type="button" class="btn btn-lg btn-custom">Send a Message</a>';
             }
             ?>
 
@@ -72,10 +72,12 @@ ob_start();
                     
                 </div>
 
-                <script type="text/javascript" src="js/baseJQ.js"></script>
-
                 <script type="text/javascript">
                     $(function () {
+                        localStorage.setItem('emailVal', '<?php echo $email; ?>');
+                        localStorage.setItem('nameVal','<?php echo $firstname . ' ' . $lastname; ?>');
+                        localStorage.setItem('subjectVal', 'Contact from <?php echo $firstname; ?> at <?php echo $sites[0]; ?>');
+
                         var selected;
                         //view site button
                         var multiAccess = "<?php echo $multiAccess; ?>";
@@ -87,21 +89,10 @@ ob_start();
                             }
                             window.location.href = 'clientarea/' + selected;
                         });
-
-                        //upload files button
-                        $('.uploadBtn').click(function () {
-                            openClosePopup('#uploadContainer');
-                        });
                         
-                        //Send Message
-                        $('#sendMessage').click(function() {
-                            openClosePopup('#contactContainer');
-                            $('#email').val('<?php echo $email; ?>');
-                            $('#name').val('<?php echo $firstname . ' ' . $lastname; ?>');
-                            $('#subject').val('Contact from <?php echo $firstname; ?> at <?php echo $sites[0]; ?>');
-                        });
                     });
                 </script>
+                <script type="text/javascript" src="js/baseJQ.js"></script>
 
 </body>
 

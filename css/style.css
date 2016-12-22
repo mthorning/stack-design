@@ -284,11 +284,11 @@ nav #logOutBtnDiv {
     .standardContainer {
       padding: 5px;
       width: 100%; } }
-  .standardContainer button,
+  .standardContainer .btn-custom,
   .standardContainer .form-group > label {
     margin: 30px; }
     @media screen and (max-width: 768px) {
-      .standardContainer button,
+      .standardContainer .btn-custom,
       .standardContainer .form-group > label {
         margin: 10px auto;
         width: 100%; } }
