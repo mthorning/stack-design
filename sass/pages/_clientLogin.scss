@@ -1,5 +1,10 @@
 #clientLoginPage {
-  .container {
+  .standardContainer {
+    @include xs {
+      margin-top: 0;
+      min-height: 100vh;
+    }
+
     min-height: 400px;
 
     a {
@@ -15,15 +20,11 @@
     }
 
     form {
-      @include xs {
+      @include lg {
         width: 100%;
       }
       margin: auto;
       width: 75%;
-
-      .btn {
-        margin-top: 30px;
-      }
 
       label,
       input {

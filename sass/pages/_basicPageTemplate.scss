@@ -5,20 +5,11 @@
   height: 100%;
 
   h1 {
+    @include sm {
+      font-size: 2em;
+    }
+
     color: $bright-color;
-  }
-
-  .standardContainer {
-    @include xs {
-      margin: 50px auto 0;
-    }
-    @include standard-container;
-
-    margin: 90px auto 30px;
-
-    button {
-      margin: 30px;
-    }
   }
 
   .menu {
@@ -60,4 +51,30 @@
   }
 }
 
+.standardContainer {
+  @include xs {
+    min-height: 100vh;
+    margin: 50px auto 0;
+
+  }
+  @include sm {
+    min-width: 0;
+  }
+
+  min-width: 755px;
+
+  @include standard-container;
+
+  margin: 90px auto 30px;
+
+  button,
+  .form-group > label {
+    @include sm {
+      margin: 10px auto;
+      width: 100%;
+    }
+
+    margin: 30px;
+  }
+}
 

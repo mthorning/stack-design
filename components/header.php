@@ -1,5 +1,5 @@
 <?php
-$_SESSION['currentPage'] = 'http://stack-design.co.uk' . $_SERVER['PHP_SELF'];
+$_SESSION['currentPage'] = $_SERVER['PHP_SELF'];
 
     $enquiryMade = false;
     $success = false;

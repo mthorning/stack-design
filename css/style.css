@@ -90,8 +90,7 @@ nav #navbarContactBtn {
 
 nav #logOutBtnDiv {
   align-items: center;
-  display: flex;
-  height: 50px; }
+  display: flex; }
   nav #logOutBtnDiv p,
   nav #logOutBtnDiv a {
     color: #d1d1d1; }
@@ -197,26 +196,28 @@ nav #logOutBtnDiv {
       margin: auto;
       text-align: center; }
 
-#clientLoginPage .container {
+#clientLoginPage .standardContainer {
   min-height: 400px; }
-  #clientLoginPage .container a {
+  @media screen and (max-width: 480px) {
+    #clientLoginPage .standardContainer {
+      margin-top: 0;
+      min-height: 100vh; } }
+  #clientLoginPage .standardContainer a {
     color: #2b2b2b; }
-  #clientLoginPage .container .alert {
+  #clientLoginPage .standardContainer .alert {
     margin: 20px auto;
     width: 75%; }
     @media screen and (max-width: 480px) {
-      #clientLoginPage .container .alert {
+      #clientLoginPage .standardContainer .alert {
         width: 100%; } }
-  #clientLoginPage .container form {
+  #clientLoginPage .standardContainer form {
     margin: auto;
     width: 75%; }
-    @media screen and (max-width: 480px) {
-      #clientLoginPage .container form {
+    @media screen and (max-width: 1200px) {
+      #clientLoginPage .standardContainer form {
         width: 100%; } }
-    #clientLoginPage .container form .btn {
-      margin-top: 30px; }
-    #clientLoginPage .container form label,
-    #clientLoginPage .container form input {
+    #clientLoginPage .standardContainer form label,
+    #clientLoginPage .standardContainer form input {
       margin: auto;
       padding: 10px; }
 
@@ -227,31 +228,9 @@ nav #logOutBtnDiv {
   height: 100%; }
   .basicPageTemplate h1 {
     color: #ff6619; }
-  .basicPageTemplate .standardContainer {
-    background-color: rgba(219, 221, 224, 0.9);
-    border-radius: 15px;
-    box-shadow: 5px 5px 8px #222;
-    float: none;
-    padding: 30px;
-    width: 75%;
-    margin: 90px auto 30px; }
-    @media screen and (max-width: 480px) {
-      .basicPageTemplate .standardContainer {
-        margin: 50px auto 0; } }
-    @media screen and (max-width: 480px) {
-      .basicPageTemplate .standardContainer {
-        border-radius: 0;
-        padding: 10px; } }
     @media screen and (max-width: 768px) {
-      .basicPageTemplate .standardContainer {
-        padding: 10px;
-        width: 90vw; } }
-    @media screen and (max-width: 480px) {
-      .basicPageTemplate .standardContainer {
-        padding: 0;
-        width: 100%; } }
-    .basicPageTemplate .standardContainer button {
-      margin: 30px; }
+      .basicPageTemplate h1 {
+        font-size: 2em; } }
   .basicPageTemplate .menu {
     padding-top: 20px;
     text-align: right; }
@@ -276,6 +255,43 @@ nav #logOutBtnDiv {
             color: #ff6619; }
         .basicPageTemplate .menu ul li:first-child {
           border-top: 1px dotted #636363; }
+
+.standardContainer {
+  min-width: 755px;
+  background-color: rgba(219, 221, 224, 0.9);
+  border-radius: 15px;
+  box-shadow: 5px 5px 8px #222;
+  float: none;
+  padding: 30px;
+  width: 75%;
+  margin: 90px auto 30px; }
+  @media screen and (max-width: 480px) {
+    .standardContainer {
+      min-height: 100vh;
+      margin: 50px auto 0; } }
+  @media screen and (max-width: 768px) {
+    .standardContainer {
+      min-width: 0; } }
+  @media screen and (max-width: 480px) {
+    .standardContainer {
+      border-radius: 0;
+      padding: 10px; } }
+  @media screen and (max-width: 768px) {
+    .standardContainer {
+      padding: 10px;
+      width: 90vw; } }
+  @media screen and (max-width: 480px) {
+    .standardContainer {
+      padding: 5px;
+      width: 100%; } }
+  .standardContainer button,
+  .standardContainer .form-group > label {
+    margin: 30px; }
+    @media screen and (max-width: 768px) {
+      .standardContainer button,
+      .standardContainer .form-group > label {
+        margin: 10px auto;
+        width: 100%; } }
 
 .footer-html {
   box-sizing: border-box;

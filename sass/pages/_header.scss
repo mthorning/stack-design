@@ -17,8 +17,6 @@ nav {
   #logOutBtnDiv {
     @include vertical-align;
 
-    height: 50px;
-
     p,
     a {
       color: $light-text-color;

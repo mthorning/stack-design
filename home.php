@@ -17,7 +17,7 @@
 <body id="homePage">
 
     <?php
-    $entry = $_SESSION['entry'];
+    $entry = isset($_SESSION['entry']);
     unset($_SESSION['entry']);
     if ($entry) {
         echo '

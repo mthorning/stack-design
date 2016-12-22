@@ -56,11 +56,11 @@ if ($errors) {
     $email_message =
     "<html>
         <body>
-            <img style='width: 20%; height: auto;' src='http://stack-design.co.uk/img/Stack-Design logo.jpg'>
+            <img style='width: 20%; height: auto;' src='http://stack-design.co.uk/img/Stack-Design-logo.jpg>
             <div style='padding: 5px;'>
-                <h2 Style='color: #001EF9;'>You have been contacted by ".ucwords($name).":</h2>
-                <h3 Style='color: #001EF9;'>Message:</h3>
-                <p style='padding-left: 30px; font-style: italic; font-size: 1.2em'>" . $message . "</p>
+                <h2 Style='color: #ff6619;'>You have been contacted by ".ucwords($name)."</h2>
+                <h3 Style='color: #ff6619;'>Message:</h3>
+                <p style='padding-left: 30px; font-size: 1.2em'>" . $message . "</p>
             </div>
             <br />
             <hr />
