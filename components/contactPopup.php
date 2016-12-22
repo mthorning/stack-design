@@ -4,10 +4,7 @@
             <div class="closeEnquiryContainer">
                 <span class="enquireBtn glyphicon glyphicon-remove formClose"></span>
             </div>
-            <div id="successMessage">
-                <div class="closeContainer">
-                    <span glyphicon glyphicon-remove formClose"></span>
-                </div>
+            <div id="successMessage" class="closeEnquiryContainer">
                 <div id="alertContainer">
                     <img src="img/greenTick.png" alt="Green tick mark">
                     <div>
@@ -16,7 +13,7 @@
                 </div>
             </div>
             <br />
-            <div id="topMessage"><?php echo $topMessage ?></div>
+            <div id="topMessage"><?php echo $topMessage; ?></div>
             <form action="modules/enquiry.php" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>

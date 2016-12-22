@@ -1,8 +1,9 @@
 <?php
 $_SESSION['currentPage'] = $_SERVER['PHP_SELF'];
 
-    $enquiryMade = false;
-    $success = false;
+$enquiryMade = false;
+$success = false;
+$topMessage = '<h3>How can I help?</h3>';
 
 //if enquiry has been made
 if (isset($_SESSION['enquiryMade'])) {
@@ -24,8 +25,6 @@ if (isset($_SESSION['enquiryMade'])) {
     unset($_SESSION['errors'], $_SESSION['formName'], $_SESSION['formEmail']);
     unset($_SESSION['formSubject'], $_SESSION['formMessage'], $_SESSION['success'], $_SESSION['enquiryMade']);
 } else {
-    //if no enquiry has been made
-    $topMessage = '<h3>How can I help?</h3>';
 
     //reset variables
     $formName = $formEmail = $formSubject = $formMessage = '';
@@ -66,7 +65,7 @@ if (isset($_SESSION['enquiryMade'])) {
                 <li id="home"><a href="home.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                 <li id="about"><a href="about.php">About</a></li>
                 <li id="userPage"><a href="userPage.php">Client Area</a></li>
-                <li id="navbarContactBtn"><a href="#contactContainer">Contact</a></li>
+                <li id="navbarContactBtn"><a href="#contactContainer" class="enquiryReq">Contact</a></li>
             </ul>
             <div id="logOutBtnDiv" class="pull-right">
                 <?php

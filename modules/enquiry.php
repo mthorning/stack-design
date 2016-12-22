@@ -45,7 +45,6 @@ if (!$message) {
 if ($errors) {
     $_SESSION['errors'] = '<div class="alert alert-danger">' . $errors . '</div>';
     $_SESSION['success'] = false;
-    header('location: ' . $_SESSION['currentPage']);
 } else {
     $_SESSION['success'] = true;
     //email details
@@ -74,6 +73,6 @@ if ($errors) {
     "Content-type: text/html" . "\r\n".
     "CC:";
     mail($email_to, $email_subject, $email_message, $headers);
-
-    header('location: ' . $_SESSION['currentPage']);
 }
+
+header('location: ' . $_SESSION['currentPage'] . '#contactContainer');

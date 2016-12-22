@@ -62,7 +62,7 @@ ob_start();
             if (!$multiAccess) {
                   echo '<a href="#uploadContainer" id="upload" type="button" class="btn btn-lg btn-custom uploadBtn">Upload Files</a>';
                   
-                  echo '<a href="#contactContainer" id="sendMessage" type="button" class="btn btn-lg btn-custom">Send a Message</a>';
+                  echo '<a href="#contactContainer" id="sendMessage" type="button" class="btn btn-lg btn-custom enquiryReq">Send a Message</a>';
             }
             ?>
 

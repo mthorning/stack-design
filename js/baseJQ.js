@@ -27,6 +27,11 @@ $(document).ready(function () {
         window.location.href = 'modules/logout.php';
     });
 
+    $('.enquiryReq').click(function () {
+        $('#name').val(localStorage.getItem('nameVal'));
+        $('#email').val(localStorage.getItem('emailVal'));
+        $('#subject').val(localStorage.getItem('subjectVal'));
+    });
 });
 
 //FUNCTIONS
@@ -43,10 +48,6 @@ function popupRequired() {
 }
 
 function openPopup(container) {
-    $('#email').val(localStorage.getItem('emailVal'));
-    $('#name').val(localStorage.getItem('nameVal'));
-    $('#subject').val(localStorage.getItem('subjectVal'));
-    $('#name').focus();
     $(container).fadeIn(50);
 }
 
