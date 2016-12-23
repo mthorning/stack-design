@@ -53,25 +53,28 @@
 
 .standardContainer {
   @include xs {
-    min-height: 100vh;
     margin: 50px auto 0;
-
+    min-height: 100vh;
   }
   @include sm {
     min-width: 0;
   }
 
+  margin: 90px auto 30px;
+  max-width: 1000px;
   min-width: 755px;
 
   @include standard-container;
 
-  margin: 90px auto 30px;
-
   .btn-custom,
   .form-group > label {
-    @include sm {
+    @include xs {
       margin: 10px auto;
       width: 100%;
+    }
+    @include sm {
+      width: 75%;
+      max-width: 350px;
     }
 
     margin: 30px;

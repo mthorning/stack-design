@@ -121,18 +121,25 @@ ob_start();
     </div>
 
     <form action="" method="post" class="form-inline">
-        <div class="form-group">
-            <label for="username">Username:
-                <input autofocus class="form-control" type="text" id="username" name="username" placeholder="Username">
-            </label>
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="username">Username:
+                    <input autofocus class="form-control" type="text" id="username" name="username" placeholder="Username">
+                </label>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="password">Password:
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </label>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="password">Password:
-                <input class="form-control" type="password" name="password" placeholder="Password">
-            </label>
+            <br />
+            <br />
+        <div class="row">
+            <div class="col-md-offset-9 col-md-2 btn-align">
+                <input type="submit" class="btn btn-lg btn-custom">
+            </div>
         </div>
-        <br />
-        <input type="submit" class="btn btn-lg btn-custom pull-right">
     </form>
 </div>
 

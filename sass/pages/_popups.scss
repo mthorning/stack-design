@@ -4,6 +4,10 @@
 }
 
 .popUpContainer {
+  @include xs {
+    padding: 0;
+  }
+
   background-color: $pop-up-bg-color;
   display: flex;
   flex-direction: column;
@@ -46,12 +50,17 @@
       @extend .popUpFormContainer;
 
       border: 0;
+      cursor: pointer;
       height: 100%;
       left: 0;
       padding: -14px;
       position: absolute;
       top: 0;
       width: 100%;
+
+      h3 {
+        text-align: center;
+      }
 
       #alertContainer {
         align-items: center;

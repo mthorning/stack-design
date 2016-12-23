@@ -3,12 +3,34 @@
     @include xs {
       margin-top: 0;
       min-height: 100vh;
+
+      h1 {
+        text-align: center;
+      }
     }
 
     min-height: 400px;
 
+    .btn-align {
+      @include sm {
+        text-align: center;
+      }
+      text-align: right;
+    }
+
     a {
       color: $dark-text-color;
+    }
+
+    form {
+      .form-group {
+        text-align: center;
+
+        > label {
+          text-align: left;
+          margin: 25px auto;
+        }
+      }
     }
 
     .alert {
@@ -17,20 +39,6 @@
       }
       margin: 20px auto;
       width: 75%;
-    }
-
-    form {
-      @include lg {
-        width: 100%;
-      }
-      margin: auto;
-      width: 75%;
-
-      label,
-      input {
-        margin: auto;
-        padding: 10px;
-      }
     }
   }
 }

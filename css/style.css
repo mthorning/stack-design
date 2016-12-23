@@ -7,10 +7,21 @@ body {
     text-decoration: none; }
   body p {
     text-indent: 30px; }
-  body p,
+    @media screen and (max-width: 480px) {
+      body p {
+        text-indent: 0; } }
   body li {
     font-size: 1.1em;
     text-align: justify; }
+  body p,
+  body .form-control {
+    font-size: 1.1em;
+    text-align: justify; }
+    @media screen and (max-width: 480px) {
+      body p,
+      body .form-control {
+        font-size: .7em;
+        text-align: left; } }
   body .black {
     background: #000;
     background-size: cover;
@@ -110,6 +121,9 @@ nav #logOutBtnDiv {
   top: 0;
   width: 100%;
   z-index: 2001; }
+  @media screen and (max-width: 480px) {
+    .popUpContainer {
+      padding: 0; } }
   .popUpContainer .formClose {
     float: right; }
     .popUpContainer .formClose:hover {
@@ -133,12 +147,15 @@ nav #logOutBtnDiv {
         width: 100%; } }
     .popUpContainer .popUpFormContainer #successMessage {
       border: 0;
+      cursor: pointer;
       height: 100%;
       left: 0;
       padding: -14px;
       position: absolute;
       top: 0;
       width: 100%; }
+      .popUpContainer .popUpFormContainer #successMessage h3 {
+        text-align: center; }
       .popUpContainer .popUpFormContainer #successMessage #alertContainer {
         align-items: center;
         display: flex;
@@ -201,25 +218,27 @@ nav #logOutBtnDiv {
   @media screen and (max-width: 480px) {
     #clientLoginPage .standardContainer {
       margin-top: 0;
-      min-height: 100vh; } }
+      min-height: 100vh; }
+      #clientLoginPage .standardContainer h1 {
+        text-align: center; } }
+  #clientLoginPage .standardContainer .btn-align {
+    text-align: right; }
+    @media screen and (max-width: 768px) {
+      #clientLoginPage .standardContainer .btn-align {
+        text-align: center; } }
   #clientLoginPage .standardContainer a {
     color: #2b2b2b; }
+  #clientLoginPage .standardContainer form .form-group {
+    text-align: center; }
+    #clientLoginPage .standardContainer form .form-group > label {
+      text-align: left;
+      margin: 25px auto; }
   #clientLoginPage .standardContainer .alert {
     margin: 20px auto;
     width: 75%; }
     @media screen and (max-width: 480px) {
       #clientLoginPage .standardContainer .alert {
         width: 100%; } }
-  #clientLoginPage .standardContainer form {
-    margin: auto;
-    width: 75%; }
-    @media screen and (max-width: 1200px) {
-      #clientLoginPage .standardContainer form {
-        width: 100%; } }
-    #clientLoginPage .standardContainer form label,
-    #clientLoginPage .standardContainer form input {
-      margin: auto;
-      padding: 10px; }
 
 .basicPageTemplate {
   background: url("../img/stackPattern.jpg") no-repeat;
@@ -257,18 +276,18 @@ nav #logOutBtnDiv {
           border-top: 1px dotted #636363; }
 
 .standardContainer {
+  margin: 90px auto 30px;
+  max-width: 1000px;
   min-width: 755px;
   background-color: rgba(219, 221, 224, 0.9);
   border-radius: 15px;
   box-shadow: 5px 5px 8px #222;
-  float: none;
   padding: 30px;
-  width: 75%;
-  margin: 90px auto 30px; }
+  width: 75%; }
   @media screen and (max-width: 480px) {
     .standardContainer {
-      min-height: 100vh;
-      margin: 50px auto 0; } }
+      margin: 50px auto 0;
+      min-height: 100vh; } }
   @media screen and (max-width: 768px) {
     .standardContainer {
       min-width: 0; } }
@@ -278,8 +297,8 @@ nav #logOutBtnDiv {
       padding: 10px; } }
   @media screen and (max-width: 768px) {
     .standardContainer {
-      padding: 10px;
-      width: 90vw; } }
+      padding: 15px;
+      width: 85%; } }
   @media screen and (max-width: 480px) {
     .standardContainer {
       padding: 5px;
@@ -287,11 +306,16 @@ nav #logOutBtnDiv {
   .standardContainer .btn-custom,
   .standardContainer .form-group > label {
     margin: 30px; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
       .standardContainer .btn-custom,
       .standardContainer .form-group > label {
         margin: 10px auto;
         width: 100%; } }
+    @media screen and (max-width: 768px) {
+      .standardContainer .btn-custom,
+      .standardContainer .form-group > label {
+        width: 75%;
+        max-width: 350px; } }
 
 .footer-html {
   box-sizing: border-box;

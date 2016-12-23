@@ -11,11 +11,23 @@ body {
   }
 
   p {
+    @include xs {
+      text-indent: 0;
+    }
     text-indent: 30px;
   }
 
-  p,
   li {
+    font-size: 1.1em;
+    text-align: justify;
+  }
+
+  p,
+  .form-control {
+    @include xs {
+      font-size: .7em;
+      text-align: left;
+    }
     font-size: 1.1em;
     text-align: justify;
   }

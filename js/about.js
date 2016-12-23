@@ -5,15 +5,18 @@ $(function () {
 
     //on side menu click
     $(window).on('hashchange', function() {
-        console.log('haschange');
-        id = window.location.hash.substring(1);
-        updateContent(id);
+        var hashPresent = window.location.hash;
+        if (hashPresent) {
+            id = window.location.hash.substring(1);
+            updateContent(id);
+        } else {
+            buildPage();
+        }
     });
     
 //FUNCTIONS
 
     function buildPage() {
-        console.log('build page called');
         //side menu creation
         $('#menuItems').html('');
         $.getJSON('about.json', function (about) {
@@ -29,9 +32,11 @@ $(function () {
     }
 
     function updateContent(id) {
-        console.log('update to content called');
         //clear content
+        var height = $('#content').height();
+        $('#content').css('height', height);
         $('#content').html('');
+        $('#content').css('height', 'auto');
         //which page am I looking for?
         var subject = id;
 
