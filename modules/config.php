@@ -5,9 +5,9 @@
  // but I strongly suggest you to use PDO or MySQLi.
  
  define('DBHOST', 'localhost');
- define('DBUSER', 'stackdes_bnwt');
- define('DBPASS', '^3w]@QTw7t8s');
- define('DBNAME', 'stackdes_stackdesign');
+ define('DBUSER', '******');
+ define('DBPASS', '*********');
+ define('DBNAME', '**********');
  
  $conn = mysql_connect(DBHOST, DBUSER, DBPASS);
  $myDatabase = mysql_select_db(DBNAME);
