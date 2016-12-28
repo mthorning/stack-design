@@ -77,11 +77,14 @@ body {
     #landingPage {
       display: block; } }
   #landingPage a {
-    height: 40%;
     margin: auto;
     text-align: center;
     text-decoration: none;
     width: 100%; }
+    @media screen and (max-width: 480px) {
+      #landingPage a {
+        display: block;
+        height: 100%; } }
     #landingPage a h1 {
       color: white; }
 

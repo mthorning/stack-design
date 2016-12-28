@@ -11,7 +11,11 @@
   max-height: 100vh;
 
   a {
-    height: 40%;
+    @include xs {
+      display: block;
+      height: 100%;
+    }
+    
     margin: auto; 
     text-align: center;
     text-decoration: none;
