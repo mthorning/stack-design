@@ -23,7 +23,9 @@
 
                 </ul>
             </div>
-            <div id="content" class="col-md-8 col-md-pull-4 col-xs-12">
+            <div id="contentWrapper">
+                <div id="content" class="col-md-8 col-md-pull-4 col-xs-12">
+                </div>
             </div>
         </div>
         <?php include 'components/footer.php'; ?>

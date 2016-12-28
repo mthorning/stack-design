@@ -10,13 +10,6 @@ body {
     }
   }
 
-  p {
-    @include xs {
-      text-indent: 0;
-    }
-    text-indent: 30px;
-  }
-
   li {
     font-size: 1.1em;
     text-align: justify;

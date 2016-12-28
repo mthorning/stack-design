@@ -5,11 +5,6 @@ body {
   body a:hover {
     color: #ff6619 !important;
     text-decoration: none; }
-  body p {
-    text-indent: 30px; }
-    @media screen and (max-width: 480px) {
-      body p {
-        text-indent: 0; } }
   body li {
     font-size: 1.1em;
     text-align: justify; }
@@ -276,14 +271,14 @@ nav #logOutBtnDiv {
           border-top: 1px dotted #636363; }
 
 .standardContainer {
-  margin: 90px auto 30px;
-  max-width: 1000px;
-  min-width: 755px;
   background-color: rgba(219, 221, 224, 0.9);
   border-radius: 15px;
   box-shadow: 5px 5px 8px #222;
   padding: 30px;
-  width: 75%; }
+  width: 75%;
+  margin: 90px auto 30px;
+  max-width: 1000px;
+  min-width: 755px; }
   @media screen and (max-width: 480px) {
     .standardContainer {
       margin: 50px auto 0;
@@ -303,6 +298,13 @@ nav #logOutBtnDiv {
     .standardContainer {
       padding: 5px;
       width: 100%; } }
+  .standardContainer p,
+  .standardContainer li {
+    font-size: 1.1em; }
+    @media screen and (max-width: 480px) {
+      .standardContainer p,
+      .standardContainer li {
+        text-align: left; } }
   .standardContainer .btn-custom,
   .standardContainer .form-group > label {
     margin: 30px; }

@@ -13,7 +13,7 @@ if (isset($_SESSION['previous'])) {
 ?>
 
 <!-- jQuery (necessary for Bootstrap 's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">

@@ -33,10 +33,10 @@ $(function () {
 
     function updateContent(id) {
         //clear content
-        var height = $('#content').height();
-        $('#content').css('height', height);
+        var height = $('#contentWrapper').css('height');
+        $('#contentWrapper').css('height', height);
+        $('#content').css('visibility', 'hidden');
         $('#content').html('');
-        $('#content').css('height', 'auto');
         //which page am I looking for?
         var subject = id;
 
@@ -51,6 +51,10 @@ $(function () {
                         $('#content').append(element.bodyOfText);
                     }
                 });
+            var newHeight = $('#content').height();
+            $('#contentWrapper').animate({height: newHeight}, 150, function () {
+                $('#content').css('visibility', 'visible');
+            });
         });
     }
 
